@@ -65,18 +65,18 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-8 px-8 section-bg-primary">
-      <div className="max-w-6xl mx-auto pt-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+    <section id="contact" className="py-12 px-6 lg:px-12 section-divider">
+      <div className="max-w-6xl">
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Get In Touch</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send me a message</h3>
+          <div className="card">
+            <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Send me a message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
                   Name *
                 </label>
                 <input
@@ -85,8 +85,8 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-custom-500 focus:border-emerald-custom-500 transition-colors ${
-                    errors.name ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 ${
+                    errors.name ? 'border-red-500' : 'border-border'
                   }`}
                   placeholder="Your full name"
                 />
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
                   Email *
                 </label>
                 <input
@@ -103,8 +103,8 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-custom-500 focus:border-emerald-custom-500 transition-colors ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 ${
+                    errors.email ? 'border-red-500' : 'border-border'
                   }`}
                   placeholder="your.email@example.com"
                 />
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -121,8 +121,8 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={6}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-custom-500 focus:border-emerald-custom-500 transition-colors resize-vertical ${
-                    errors.message ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 resize-vertical ${
+                    errors.message ? 'border-red-500' : 'border-border'
                   }`}
                   placeholder="Tell me about your project or just say hello..."
                 />
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center px-6 py-3 bg-emerald-custom-600 text-white rounded-lg hover:bg-emerald-custom-700 focus:ring-2 focus:ring-emerald-custom-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
@@ -146,63 +146,63 @@ const Contact: React.FC = () => {
           
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+            <div className="card">
+              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Contact Information</h3>
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald-custom-100 rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="w-5 h-5 text-emerald-custom-600" />
+                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
+                    <Mail className="w-5 h-5 text-brand-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Email</p>
-                    <p className="text-gray-900 font-medium">john.doe@example.com</p>
+                    <p className="text-sm text-neutral-600">Email</p>
+                    <p className="text-neutral-900 font-medium">john.doe@example.com</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald-custom-100 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-emerald-custom-600" />
+                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
+                    <Phone className="w-5 h-5 text-brand-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Phone</p>
-                    <p className="text-gray-900 font-medium">+1 (555) 123-4567</p>
+                    <p className="text-sm text-neutral-600">Phone</p>
+                    <p className="text-neutral-900 font-medium">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-emerald-custom-100 rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="w-5 h-5 text-emerald-custom-600" />
+                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
+                    <MapPin className="w-5 h-5 text-brand-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Location</p>
-                    <p className="text-gray-900 font-medium">San Francisco, CA</p>
+                    <p className="text-sm text-neutral-600">Location</p>
+                    <p className="text-neutral-900 font-medium">San Francisco, CA</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Let's Connect</h3>
+            <div className="card">
+              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Let's Connect</h3>
               
               <div className="flex gap-4">
                 <a
-                  href="#"
-                  className="flex items-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  href="https://linkedin.com/in/johndoe"
+                  className="flex items-center px-4 py-2 bg-blue-600/10 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
                 >
                   <Linkedin className="w-5 h-5 mr-2" />
                   LinkedIn
                 </a>
                 <a
-                  href="#"
-                  className="flex items-center px-4 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
+                  href="https://github.com/johndoe"
+                  className="flex items-center px-4 py-2 bg-neutral-800/10 text-neutral-800 rounded-lg font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
                 >
                   <Github className="w-5 h-5 mr-2" />
                   GitHub
                 </a>
                 <a
-                  href="#"
-                  className="flex items-center px-4 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+                  href="https://devpost.com/johndoe"
+                  className="flex items-center px-4 py-2 bg-orange-600/10 text-orange-600 rounded-lg font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
                   DevPost
@@ -210,9 +210,9 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-emerald-custom-50 rounded-xl p-8">
-              <h3 className="text-xl font-semibold text-emerald-custom-800 mb-4">Open to Opportunities</h3>
-              <p className="text-emerald-custom-700 leading-relaxed">
+            <div className="bg-brand-50 rounded-xl p-8 border border-brand-200">
+              <h3 className="text-xl font-semibold text-brand-800 mb-4">Open to Opportunities</h3>
+              <p className="text-brand-700 leading-relaxed">
                 I'm always interested in discussing new opportunities, collaborating on interesting projects, 
                 or just having a conversation about technology and innovation. Don't hesitate to reach out!
               </p>

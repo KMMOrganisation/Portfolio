@@ -105,20 +105,20 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-8 px-8 section-bg-primary">
-      <div className="max-w-7xl mx-auto pt-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Featured Projects</h2>
+    <section id="projects" className="py-12 px-6 lg:px-12 section-divider">
+      <div className="max-w-7xl">
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Featured Projects</h2>
         
-        <div className="space-y-12">
+        <div className="space-y-16">
           {projects.map((project) => {
             const currentImageIndex = activeImageIndex[project.id] || 0;
             
             return (
-              <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+              <div key={project.id} className="card">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Image Carousel */}
                   <div className="relative">
-                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                    <div className="aspect-video bg-neutral-100 rounded-lg overflow-hidden border border-border">
                       <img
                         src={project.images[currentImageIndex]}
                         alt={`${project.title} screenshot ${currentImageIndex + 1}`}
@@ -129,13 +129,13 @@ const Projects: React.FC = () => {
                     {/* Carousel Controls */}
                     <button
                       onClick={() => prevImage(project.id, project.images.length)}
-                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity"
+                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity duration-200"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
                     <button
                       onClick={() => nextImage(project.id, project.images.length)}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity"
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity duration-200"
                     >
                       <ChevronRight className="w-5 h-5" />
                     </button>
@@ -146,8 +146,8 @@ const Projects: React.FC = () => {
                         <button
                           key={index}
                           onClick={() => setActiveImageIndex(prev => ({ ...prev, [project.id]: index }))}
-                          className={`w-3 h-3 rounded-full transition-colors ${
-                            index === currentImageIndex ? 'bg-emerald-custom-600' : 'bg-gray-300'
+                          className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                            index === currentImageIndex ? 'bg-brand-600' : 'bg-neutral-300'
                           }`}
                         />
                       ))}
@@ -156,23 +156,23 @@ const Projects: React.FC = () => {
                   
                   {/* Project Details */}
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-6">{project.title}</h3>
                     
                     {/* Overview Section */}
                     <div>
                       <button
                         onClick={() => toggleSection(`${project.id}-overview`)}
-                        className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                        className="flex items-center justify-between w-full p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100 transition-colors duration-200 border border-border"
                       >
-                        <span className="font-semibold text-gray-800">Overview</span>
+                        <span className="font-semibold text-neutral-800">Overview</span>
                         {expandedSections[`${project.id}-overview`] ? (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-600" />
                         ) : (
-                          <ChevronRightIcon className="w-5 h-5 text-gray-600" />
+                          <ChevronRightIcon className="w-5 h-5 text-neutral-600" />
                         )}
                       </button>
                       {expandedSections[`${project.id}-overview`] && (
-                        <div className="p-4 text-gray-700 leading-relaxed">
+                        <div className="p-4 text-neutral-700 leading-relaxed border border-t-0 border-border rounded-b-lg">
                           {project.overview}
                         </div>
                       )}
@@ -182,17 +182,17 @@ const Projects: React.FC = () => {
                     <div>
                       <button
                         onClick={() => toggleSection(`${project.id}-tools`)}
-                        className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                        className="flex items-center justify-between w-full p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100 transition-colors duration-200 border border-border"
                       >
-                        <span className="font-semibold text-gray-800">Tools Used / How it was Built</span>
+                        <span className="font-semibold text-neutral-800">Tools Used / How it was Built</span>
                         {expandedSections[`${project.id}-tools`] ? (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-600" />
                         ) : (
-                          <ChevronRightIcon className="w-5 h-5 text-gray-600" />
+                          <ChevronRightIcon className="w-5 h-5 text-neutral-600" />
                         )}
                       </button>
                       {expandedSections[`${project.id}-tools`] && (
-                        <div className="p-4 text-gray-700 leading-relaxed">
+                        <div className="p-4 text-neutral-700 leading-relaxed border border-t-0 border-border rounded-b-lg">
                           {project.tools}
                         </div>
                       )}
@@ -202,34 +202,34 @@ const Projects: React.FC = () => {
                     <div>
                       <button
                         onClick={() => toggleSection(`${project.id}-learned`)}
-                        className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                        className="flex items-center justify-between w-full p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100 transition-colors duration-200 border border-border"
                       >
-                        <span className="font-semibold text-gray-800">What I Learned</span>
+                        <span className="font-semibold text-neutral-800">What I Learned</span>
                         {expandedSections[`${project.id}-learned`] ? (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-600" />
                         ) : (
-                          <ChevronRightIcon className="w-5 h-5 text-gray-600" />
+                          <ChevronRightIcon className="w-5 h-5 text-neutral-600" />
                         )}
                       </button>
                       {expandedSections[`${project.id}-learned`] && (
-                        <div className="p-4 text-gray-700 leading-relaxed">
+                        <div className="p-4 text-neutral-700 leading-relaxed border border-t-0 border-border rounded-b-lg">
                           {project.learned}
                         </div>
                       )}
                     </div>
                     
                     {/* Project Links */}
-                    <div className="flex gap-4 pt-4">
+                    <div className="flex gap-4 pt-6">
                       <a
                         href={project.github}
-                        className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
+                        className="flex items-center px-4 py-2 bg-neutral-800 text-white rounded-lg font-medium hover:bg-neutral-900 transition-colors duration-200"
                       >
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </a>
                       <a
                         href={project.demo}
-                        className="flex items-center px-4 py-2 bg-emerald-custom-600 text-white rounded-lg hover:bg-emerald-custom-700 transition-colors"
+                        className="btn-primary"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo

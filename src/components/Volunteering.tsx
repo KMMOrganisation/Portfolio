@@ -33,49 +33,50 @@ const Volunteering: React.FC = () => {
   ];
 
   return (
-    <section id="volunteering" className="min-h-screen py-8 px-8 section-bg-secondary">
-      <div className="max-w-4xl mx-auto pt-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Volunteer Experience</h2>
+    <section id="volunteering" className="py-12 px-6 lg:px-12 bg-neutral-50 section-divider">
+      <div className="max-w-4xl">
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Volunteer Experience</h2>
         
-        <div className="space-y-6">
+        <div className="space-y-8">
           {volunteerExperience.map((volunteer, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200">
+            <div key={index} className="card">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-rose-50 rounded-lg flex items-center justify-center flex-shrink-0 border border-rose-200">
                   <Heart className="w-6 h-6 text-rose-600" />
                 </div>
                 
                 <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {volunteer.organization} - {volunteer.role}
-                    </h3>
-                    <div className="flex items-center text-gray-600 text-sm mt-1 sm:mt-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-semibold text-neutral-900">{volunteer.role}</h3>
+                      <h4 className="text-lg font-medium text-brand-600">{volunteer.organization}</h4>
+                    </div>
+                    <div className="flex items-center text-neutral-600 text-sm mt-2 sm:mt-0">
                       <Calendar className="w-4 h-4 mr-1" />
                       {volunteer.duration}
                     </div>
                   </div>
                   
-                  <div className="flex items-center text-gray-600 mb-4">
+                  <div className="flex items-center text-neutral-600 mb-4">
                     <MapPin className="w-4 h-4 mr-1" />
                     {volunteer.location}
                   </div>
                   
-                  <p className="text-gray-700 mb-4 leading-relaxed">{volunteer.description}</p>
+                  <p className="text-neutral-700 mb-6 leading-relaxed">{volunteer.description}</p>
                   
-                  <div className="bg-emerald-custom-50 p-4 rounded-lg mb-4">
+                  <div className="bg-brand-50 p-4 rounded-lg mb-6 border border-brand-200">
                     <div className="flex items-center mb-2">
-                      <Users className="w-5 h-5 text-emerald-custom-700 mr-2" />
-                      <span className="font-medium text-emerald-custom-800">Impact & Results</span>
+                      <Users className="w-5 h-5 text-brand-700 mr-2" />
+                      <span className="font-medium text-brand-800">Impact & Results</span>
                     </div>
-                    <p className="text-emerald-custom-700 text-sm leading-relaxed">{volunteer.impact}</p>
+                    <p className="text-brand-700 text-sm leading-relaxed">{volunteer.impact}</p>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
                     {volunteer.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-rose-50 text-rose-700 rounded-md text-sm font-medium"
+                        className="px-3 py-1 bg-rose-50 text-rose-700 rounded-md text-sm font-medium border border-rose-200"
                       >
                         {skill}
                       </span>

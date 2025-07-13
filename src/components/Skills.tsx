@@ -33,25 +33,27 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen py-8 px-8 section-bg-secondary">
-      <div className="max-w-6xl mx-auto pt-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Skills & Expertise</h2>
+    <section id="skills" className="py-12 px-6 lg:px-12 bg-neutral-50 section-divider">
+      <div className="max-w-6xl">
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Skills & Expertise</h2>
         
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">Technical Skills</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Technical Skills</h3>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
             {technicalSkills.map((skill, index) => {
               const Icon = skill.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center group cursor-pointer transform hover:scale-105"
+                  className="card p-4 text-center group cursor-pointer aspect-square flex flex-col justify-center"
                 >
-                  <div className="w-12 h-12 bg-emerald-custom-50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-custom-100 transition-colors duration-200">
-                    <Icon className="w-6 h-6 text-emerald-custom-600" />
+                  <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-brand-100 transition-colors duration-200">
+                    <Icon className="w-5 h-5 text-brand-600" />
                   </div>
-                  <h4 className="font-semibold text-gray-800 mb-1">{skill.name}</h4>
-                  <p className="text-sm text-gray-600">{skill.category}</p>
+                  <div>
+                    <h4 className="text-sm font-semibold text-neutral-800 mb-1 leading-tight">{skill.name}</h4>
+                    <p className="text-xs text-neutral-600">{skill.category}</p>
+                  </div>
                 </div>
               );
             })}
@@ -59,12 +61,12 @@ const Skills: React.FC = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">Professional Skills</h3>
+          <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Professional Skills</h3>
           <div className="flex flex-wrap gap-3">
             {professionalSkills.map((skill, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-emerald-custom-600 text-white rounded-full text-sm font-medium hover:bg-emerald-custom-700 transition-all duration-200 cursor-default shadow-md hover:shadow-lg transform hover:scale-105"
+                className="px-4 py-2 bg-brand-600 text-white rounded-full text-sm font-medium hover:bg-brand-700 transition-colors duration-200 cursor-default"
               >
                 {skill}
               </span>

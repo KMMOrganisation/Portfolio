@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, MapPin, Building2 } from 'lucide-react';
 
 const WorkHistory: React.FC = () => {
   const workExperience = [
@@ -38,41 +38,42 @@ const WorkHistory: React.FC = () => {
   ];
 
   return (
-    <section id="work" className="min-h-screen py-8 px-8 section-bg-primary">
-      <div className="max-w-4xl mx-auto pt-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Work Experience</h2>
+    <section id="work" className="py-12 px-6 lg:px-12 section-divider">
+      <div className="max-w-4xl">
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Work Experience</h2>
         
-        <div className="space-y-6">
+        <div className="space-y-8">
           {workExperience.map((job, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200">
+            <div key={index} className="card">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-emerald-custom-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="w-6 h-6 text-emerald-custom-600" />
+                <div className="w-12 h-12 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-6 h-6 text-brand-600" />
                 </div>
                 
                 <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {job.company} - {job.position}
-                    </h3>
-                    <div className="flex items-center text-gray-600 text-sm mt-1 sm:mt-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-semibold text-neutral-900">{job.position}</h3>
+                      <h4 className="text-lg font-medium text-brand-600">{job.company}</h4>
+                    </div>
+                    <div className="flex items-center text-neutral-600 text-sm mt-2 sm:mt-0">
                       <Calendar className="w-4 h-4 mr-1" />
                       {job.duration}
                     </div>
                   </div>
                   
-                  <div className="flex items-center text-gray-600 mb-4">
+                  <div className="flex items-center text-neutral-600 mb-4">
                     <MapPin className="w-4 h-4 mr-1" />
                     {job.location}
                   </div>
                   
-                  <p className="text-gray-700 mb-4 leading-relaxed">{job.description}</p>
+                  <p className="text-neutral-700 mb-6 leading-relaxed">{job.description}</p>
                   
                   <div className="flex flex-wrap gap-2">
                     {job.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium"
+                        className="px-3 py-1 bg-neutral-100 text-neutral-700 rounded-md text-sm font-medium border border-border"
                       >
                         {skill}
                       </span>

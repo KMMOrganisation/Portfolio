@@ -8,48 +8,50 @@
   }
   
   body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: #fefefe;
-    color: #1f2937;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background-color: #ffffff;
+    color: #171717;
+    line-height: 1.6;
   }
   
-  /* Custom scrollbar for webkit browsers */
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #f5f5f5;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #d4d4d4;
     border-radius: 3px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #a3a3a3;
   }
 }
 
 @layer components {
-  .section-bg-primary {
-    background-color: #fefefe;
+  .section-divider {
+    border-bottom: 1px solid #e2e8f0;
   }
   
-  .section-bg-secondary {
-    background-color: #fafafa;
+  .brand-text {
+    color: #059669;
+    font-weight: 600;
   }
   
-  .emerald-primary {
-    color: #11405E;
+  .btn-primary {
+    @apply bg-brand-600/10 text-brand-600 px-4 py-2 rounded-lg font-medium hover:bg-brand-600 hover:text-white transition-colors duration-200;
   }
   
-  .emerald-bg-primary {
-    background-color: #11405E;
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-700 px-4 py-2 rounded-lg font-medium border border-border hover:bg-neutral-700 hover:text-white transition-colors duration-200;
   }
   
-  .emerald-hover:hover {
-    background-color: #11405E;
+  .card {
+    @apply bg-white border border-border rounded-xl p-6 hover:shadow-sm transition-shadow duration-200;
   }
 }
