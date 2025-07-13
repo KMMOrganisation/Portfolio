@@ -4,53 +4,30 @@ import { BookOpen, Calendar, MapPin, Award } from 'lucide-react';
 const Courses: React.FC = () => {
   const courses = [
     {
-      title: 'Advanced React Patterns',
-      institution: 'Frontend Masters',
-      duration: '2023',
+      title: 'Instructional Design Fundamentals',
+      institution: 'Cambridge Institute of Continuing Education',
+      duration: '2024',
       location: 'Online',
-      description: 'Deep dive into advanced React patterns including render props, higher-order components, compound components, and custom hooks. Learned performance optimization techniques and state management patterns.',
-      skills: ['React Patterns', 'Performance Optimization', 'Custom Hooks', 'State Management']
+      description: 'A comprehensive 6-week course covering the theory and practice of creating effective learning and training content. Explored the ADDIE model (Analysis, Design, Development, Implementation, and Evaluation), learning domains and Blooms Taxonomy, and hands-on experience designing instructional content using storyboard approaches. Gained practical skills in audience analysis, writing effective learning objectives, and evaluating training effectiveness - directly applicable to creating user-centered technical documentation and training materials.',
+      skills: ['Instructional Design', 'Audience Analysis', 'Learning Objectives', 'Content Storyboarding', 'Training Evaluation']
     },
     {
-      title: 'System Design Interview',
-      institution: 'Educative',
+      title: 'Junior Data Science Degree',
+      institution: 'Code First Girls',
       duration: '2023',
       location: 'Online',
-      description: 'Comprehensive course covering scalable system design principles, distributed systems, microservices architecture, and database design. Practiced designing systems like Twitter, Netflix, and Uber.',
-      skills: ['System Design', 'Distributed Systems', 'Microservices', 'Database Design']
+      description: 'A comprehensive intensive program covering foundational data science and programming skills, sponsored by the Defence Science and Technology Laboratory (DSTL). Developed practical experience in data analysis, programming, and machine learning techniques with hands-on projects and mentorship support. Achieved Distinction grade while gaining exposure to real-world data science applications and industry best practices.',
+      skills: ['Python Programming', 'SQL Database Management', 'JavaScript', 'Data Analysis', 'Machine Learning']
     },
     {
-      title: 'Docker & Kubernetes',
+      title: 'Certificate Program in Learning and Development',
       institution: 'Udemy',
-      duration: '2022',
+      duration: '2024',
       location: 'Online',
-      description: 'Hands-on course covering containerization with Docker, orchestration with Kubernetes, and deployment strategies. Built and deployed multiple applications using container technologies.',
-      skills: ['Docker', 'Kubernetes', 'DevOps', 'Container Orchestration']
+      description: 'A short course covering the strategic role of Learning and Development in business operations and how to transform L&D from a cost center to a strategic business partner. Explored the complete end-to-end L&D process including strategy building, learner engagement, intervention design, and measuring return on learning investment. Gained understanding of how to align training goals with business objectives and sustaining continuous learning in workplace environments.',
+      skills: ['Learning Strategy Development', 'Training Design & Delivery', 'Learner Engagement', 'ROI Calculation', 'Business Alignment']
     },
-    {
-      title: 'Machine Learning Fundamentals',
-      institution: 'Coursera (Stanford)',
-      duration: '2022',
-      location: 'Online',
-      description: 'Introduction to machine learning algorithms, supervised and unsupervised learning, neural networks, and practical applications. Completed projects using Python and scikit-learn.',
-      skills: ['Machine Learning', 'Python', 'Data Analysis', 'Neural Networks']
-    },
-    {
-      title: 'GraphQL with React',
-      institution: 'Pluralsight',
-      duration: '2021',
-      location: 'Online',
-      description: 'Complete guide to building applications with GraphQL and React. Covered Apollo Client, schema design, mutations, subscriptions, and performance optimization.',
-      skills: ['GraphQL', 'Apollo Client', 'React', 'API Design']
-    },
-    {
-      title: 'AWS Solutions Architect',
-      institution: 'A Cloud Guru',
-      duration: '2021',
-      location: 'Online',
-      description: 'Comprehensive preparation for AWS Solutions Architect certification. Covered EC2, S3, RDS, Lambda, VPC, and other core AWS services with hands-on labs.',
-      skills: ['AWS', 'Cloud Architecture', 'Infrastructure', 'Security']
-    }
+
   ];
 
   return (

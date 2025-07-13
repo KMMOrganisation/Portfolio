@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-600">Email</p>
-                    <p className="text-neutral-900 font-medium">john.doe@example.com</p>
+                    <p className="text-neutral-900 font-medium">Available on my CV</p>
                   </div>
                 </div>
                 
@@ -166,7 +166,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-600">Phone</p>
-                    <p className="text-neutral-900 font-medium">+1 (555) 123-4567</p>
+                    <p className="text-neutral-900 font-medium">Available on my CV</p>
                   </div>
                 </div>
                 
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-600">Location</p>
-                    <p className="text-neutral-900 font-medium">San Francisco, CA</p>
+                    <p className="text-neutral-900 font-medium">Remote - Europe</p>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-semibold text-brand-800 mb-4">Open to Opportunities</h3>
               <p className="text-brand-700 leading-relaxed">
                 I'm always interested in discussing new opportunities, collaborating on interesting projects, 
-                or just having a conversation about technology and innovation. Don't hesitate to reach out!
+                or just having a conversation about technology and education. Don't hesitate to reach out!
               </p>
             </div>
           </div>
