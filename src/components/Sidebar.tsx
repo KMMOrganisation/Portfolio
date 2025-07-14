@@ -23,13 +23,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionClick }) => {
       <div className="p-6 border-b border-border">
         <div className="w-20 h-20 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full mx-auto mb-4 flex items-center justify-center">
           <img
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+            src="profile_picture.jpg"
             alt="Profile"
-            className="w-18 h-18 rounded-full object-cover"
+            className="w-24 h-24 rounded-full object-cover"
           />
         </div>
-        <h2 className="text-lg font-semibold text-neutral-900 text-center">John Doe</h2>
-        <p className="text-sm text-brand-600 text-center font-medium">Software Developer</p>
+        <h2 className="text-lg font-semibold text-neutral-900 text-center">Katie Roberts</h2>
       </div>
       
       <nav className="flex-1 p-4 overflow-y-auto">
