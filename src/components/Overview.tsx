@@ -6,50 +6,49 @@ const Overview: React.FC = () => {
     <section id="overview" className="py-12 px-6 lg:px-12">
       <div className="max-w-4xl">
         <div className="mb-12">
-          <h1 className="text-5xl font-bold text-neutral-900 mb-6">John Doe</h1>
-          <h2 className="text-2xl text-brand-600 font-semibold mb-3">Full Stack Software Developer</h2>
-          <p className="text-lg text-neutral-600 mb-8">San Francisco, CA</p>
+          <h1 className="text-5xl font-bold text-neutral-900 mb-6">Katie Roberts</h1>
+          <p className="text-lg text-neutral-600 mb-8">Europe</p>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-neutral-700 leading-relaxed mb-6">
-              Passionate <span className="brand-text">full-stack developer</span> with 5+ years of experience building scalable web applications 
-              and leading cross-functional teams. Specialized in React, Node.js, and cloud technologies. 
-              I thrive on solving complex problems and creating intuitive user experiences that make a real 
-              impact.
+              As a multifaceted professional with a strong background in technical writing, customer experience, and education,
+              I excel in creating user-centered documentation and fostering cross-functional collaboration. Currently serving as a CX Technical Representative at 1Password,
+              I play an integral role in identifying knowledge gaps, creating comprehensive internal documentation, and simplifying complex technical issues for diverse audiences.
+              My experience spans various sectors, including education, customer service, and product support, allowing me to develop a well-rounded approach to problem-solving and team leadership.
             </p>
             
             <p className="text-neutral-700 leading-relaxed mb-6">
-              When I'm not coding, you'll find me mentoring junior developers, contributing to <span className="brand-text">open-source 
-              projects</span>, or exploring the latest trends in artificial intelligence and machine learning.
+              I bring a unique blend of technical writing expertise, instructional design knowledge, and customer success experience.
+              From creating clear and accessible technical documentation at 1Password to leveraging educational methodologies to design user-friendly resources,
+              I am passionate about translating complex ideas into practical, easy-to-understand content.
+              With hands-on experience in mentoring teams, driving customer success, and managing product support processes, I thrive in environments that demand empathy, precision, and collaboration.
             </p>
             
             <p className="text-neutral-700 leading-relaxed">
-              My journey in tech started with a Computer Science degree from Stanford University, where I 
-              discovered my love for both the logical problem-solving aspects of programming and the creative 
-              possibilities of user interface design. Since then, I've worked with startups and established 
-              companies alike, always focusing on delivering <span className="brand-text">high-quality, maintainable code</span> and fostering 
-              collaborative team environments.
+              My educational background, including an MSc in Educational Research, enhances my approach to content creation, enabling me to design structured,
+              evidence-based materials that improve learning and development outcomes. Whether its developing training documentation, supporting cross-functional teams,
+              or facilitating customer relationships, I bring an analytical and empathetic mindset to every project.
             </p>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-4">
           <a
-            href="https://linkedin.com/in/johndoe"
+            href="https://www.linkedin.com/in/katieroberts00/"
             className="flex items-center px-4 py-2 bg-blue-600/10 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
           >
             <Linkedin className="w-5 h-5 mr-2" />
             LinkedIn
           </a>
           <a
-            href="https://github.com/johndoe"
+            href="https://github.com/KatieM00"
             className="flex items-center px-4 py-2 bg-neutral-800/10 text-neutral-800 rounded-lg font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
           >
             <Github className="w-5 h-5 mr-2" />
             GitHub
           </a>
           <a
-            href="https://devpost.com/johndoe"
+            href="https://devpost.com/katiemroberts00?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav&_gl=1*1sm5mr3*_ga*OTg0NTIwMzg4LjE3NTI1MDMxMjQ."
             className="flex items-center px-4 py-2 bg-orange-600/10 text-orange-600 rounded-lg font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
           >
             <ExternalLink className="w-5 h-5 mr-2" />
