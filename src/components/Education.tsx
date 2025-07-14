@@ -10,38 +10,28 @@ const Education: React.FC = () => {
       location: 'Distance Learning',
       description: 'Conducted comprehensive research utilizing SPSS and Python for data analysis across core modules including The Nature of Educational Enquiry, Interpretive Methodologies, Scientific Methodologies, and Designing and Communicating Research. Completed final thesis exploring "University students perception of the effectiveness of their financial education in preparing them for life out of education," demonstrating advanced research capabilities and critical analysis of educational outcomes and student preparedness.',
       coursework: ['The Nature of Educational Enquiry', 'Qualitative Methods in Educational Research', 'Quantitative Methods in Educational Research', 'Designing and Communicating Research', 'Dissertation'],
-      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
+      skills: ['Qualitative Research Methods', 'Quantitative Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Communication', 'Data visualisation', 'Educational research'],
       type: 'degree'
     },
     {
-      institution: 'University of California, Berkeley',
-      degree: 'Bachelor of Science in Computer Science',
-      duration: '2012 - 2016',
-      location: 'Berkeley, CA',
-      description: 'Graduated Magna Cum Laude with honors in Computer Science. Active member of Computer Science Honor Society and Programming Club. Led team project that won Best Innovation Award.',
-      coursework: ['Data Structures', 'Computer Architecture', 'Operating Systems', 'Web Development', 'Discrete Mathematics'],
-      skills: ['Java', 'C++', 'Python', 'Web Development', 'Database Design'],
+      institution: 'The University of the West of England - (UWE)',
+      degree: 'BA (hons) Studies in Education',
+      duration: 'Sep 2018 - Jun 2022',
+      location: 'Bristol, UK',
+      description: 'Developed a strong foundation in educational theory and practice with a focus on primary education (KS1 and KS2). Conducted independent research on the impact of statutory assessments on primary-aged children, demonstrating advanced research and analytical skills. Gained extensive practical experience through professional placements, emphasizing inclusive teaching and learning approaches. Completed additional trainee teacher role (Feb 2019 - Nov 2021), gaining hands-on teaching experience across KS1 and KS2 while developing strong classroom management and differentiation skills with a commitment to inclusive education.',
+      coursework: ['Inclusive Practice', 'Professional Practice', 'Pedagogy developement', 'Educational Theory', 'Dissertation'],
+      skills: ['Primary Education', 'Inclusive Teaching', 'Lesson Planning', 'Classroom Management', 'Digital Learning'],
       type: 'degree'
     },
     {
-      institution: 'AWS Certification',
-      degree: 'AWS Certified Solutions Architect',
-      duration: '2021',
-      location: 'Online',
-      description: 'Comprehensive certification covering cloud architecture, security, and deployment strategies. Demonstrates expertise in designing distributed systems on AWS.',
-      coursework: ['Cloud Architecture', 'Security', 'Networking', 'Database Design', 'Cost Optimization'],
-      skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Security', 'System Design'],
-      type: 'certification'
-    },
-    {
-      institution: 'Google Cloud Platform',
-      degree: 'Professional Cloud Developer',
-      duration: '2020',
-      location: 'Online',
-      description: 'Certification in cloud-native application development, demonstrating proficiency in GCP services and modern development practices.',
-      coursework: ['Cloud Functions', 'Kubernetes', 'API Design', 'DevOps', 'Monitoring'],
-      skills: ['GCP', 'Kubernetes', 'API Development', 'Microservices', 'Container Orchestration'],
-      type: 'certification'
+      institution: 'South Devon College ',
+      degree: 'Access to HE Social Sciences',
+      duration: '2Sep 2016 - Jun 2017',
+      location: 'Paignton, UK',
+      description: 'Developed a strong foundation in social sciences, including sociology, psychology, and criminology. Demonstrated leadership and interpersonal skills as a peer-elected student representative. Explored key sociological concepts such as family, media, education, and crime and deviance, developing critical thinking and analytical skills through comprehensive study of social structures and human behavior.',
+      coursework: ['Sociology', 'Psychology', 'Criminology'],
+      skills: ['Social Research', 'Critical Analysis', 'Leadership', 'Interpersonal Skills', 'Student Representation'],
+      type: 'College degree'
     }
   ];
 
@@ -96,7 +86,7 @@ const Education: React.FC = () => {
                   </div>
 
                   <div>
-                    <h5 className="font-medium text-neutral-800 mb-3">Skills Gained:</h5>
+                    <h5 className="font-medium text-neutral-800 mb-3">Skills:</h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.skills.map((skill, skillIndex) => (
                         <span
