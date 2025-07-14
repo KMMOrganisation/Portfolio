@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionClick }) => {
           <img
             src="profile_picture.jpg"
             alt="Profile"
-            className="w-20 h-20 rounded-full object-cover"
+            className="w-18 h-18 rounded-full object-cover"
           />
         </div>
         <h2 className="text-lg font-semibold text-neutral-900 text-center">Katie Roberts</h2>
