@@ -10,7 +10,7 @@ const Education: React.FC = () => {
       location: 'Distance Learning',
       description: 'Conducted comprehensive research utilizing SPSS and Python for data analysis across core modules including The Nature of Educational Enquiry, Interpretive Methodologies, Scientific Methodologies, and Designing and Communicating Research. Completed final thesis exploring "University students perception of the effectiveness of their financial education in preparing them for life out of education," demonstrating advanced research capabilities and critical analysis of educational outcomes and student preparedness.',
       coursework: ['The Nature of Educational Enquiry', 'Qualitative Methods in Educational Research', 'Quantitative Methods in Educational Research', 'Designing and Communicating Research', 'Dissertation'],
-      
+      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
       type: 'degree'
     },
     {
@@ -90,8 +90,16 @@ const Education: React.FC = () => {
                           className="px-3 py-1 bg-brand-50 text-brand-700 rounded-md text-sm font-medium border border-brand-200"
                         >
                           {course}
+                          <div className="flex flex-wrap gap-2">
+                    {volunteer.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-3 py-1 bg-rose-50 text-rose-700 rounded-md text-sm font-medium border border-rose-200"
+                      >
+                        {skill}
                         </span>
                       ))}
+                      </div>
                     </div>
                   </div>
                 </div>
