@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Github, Linkedin, FileText } from 'lucide-react';
 import devpostIcon from '../../Devpost.png'; 
+import CV_icon from '../../CV_icon.png'; 
 
 const Overview: React.FC = () => {
   return (
@@ -60,7 +61,7 @@ const Overview: React.FC = () => {
             className="flex items-center justify-center w-12 h-12 bg-neutral-600/10 text-neutral-600 rounded-full font-medium hover:bg-neutral-600 hover:text-white transition-colors duration-200"
             title="View CV"
           >
-            <FileText className="w-6 h-6" />
+            <img src={CV_icon} alt="DevPost" className="w-6 h-6" />
           </a>
         </div>
       </div>
