@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Code, Briefcase, GraduationCap, FolderOpen, BookOpen, Heart, Mail } from 'lucide-react';
+import profilePicture from '../../profile_picture.jpg';
 
 interface SidebarProps {
   activeSection: string;
@@ -23,7 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionClick }) => {
       <div className="p-6 border-b border-border">
         <div className="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center">
           <img
-            src="../../profile_picture.jpg"
+            src={profilePicture}
             alt="Profile"
             className="w-24 h-24 rounded-full object-cover"
           />
