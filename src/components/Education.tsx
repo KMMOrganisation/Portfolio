@@ -90,8 +90,9 @@ const Education: React.FC = () => {
                           className="px-3 py-1 bg-brand-50 text-brand-700 rounded-md text-sm font-medium border border-brand-200"
                         >
                           {course}
-                          <div className="flex flex-wrap gap-2">
-                    {volunteer.skills.map((skill, skillIndex) => (
+
+                   <div className="flex flex-wrap gap-2">
+                      {volunteer.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
                         className="px-3 py-1 bg-rose-50 text-rose-700 rounded-md text-sm font-medium border border-rose-200"
@@ -99,7 +100,6 @@ const Education: React.FC = () => {
                         {skill}
                         </span>
                       ))}
-                      </div>
                     </div>
                   </div>
                 </div>
