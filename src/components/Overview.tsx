@@ -54,14 +54,14 @@ const Overview: React.FC = () => {
             className="flex items-center justify-center w-12 h-12 bg-orange-600/10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
             title="DevPost"
           >
-            <img src={devpostIcon} alt="DevPost" className="w-6 h-6" />
+            <img src={devpostIcon} alt="DevPost" className="w-10 h-10" />
           </a>
           <a
             href="/john-doe-cv.pdf"
             className="flex items-center justify-center w-12 h-12 bg-yellow-600/10 text-yellow-600 rounded-full font-medium hover:bg-neutral-600 hover:text-white transition-colors duration-200"
             title="View CV"
           >
-            <img src={CV_icon} alt="CV" className="w-10 h-10" />
+            <img src={CV_icon} alt="CV" className="w-12 h-10" />
           </a>
         </div>
       </div>
