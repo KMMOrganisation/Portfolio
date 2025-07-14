@@ -35,31 +35,31 @@ const Overview: React.FC = () => {
         <div className="flex flex-wrap gap-4">
           <a
             href="https://www.linkedin.com/in/katieroberts00/"
-            className="flex items-center px-4 py-2 bg-blue-600/10 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+            className="flex items-center justify-center w-12 h-12 bg-blue-600/10 text-blue-600 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+            title="LinkedIn"
           >
-            <Linkedin className="w-5 h-5 mr-2" />
-            LinkedIn
+            <Linkedin className="w-6 h-6" />
           </a>
           <a
             href="https://github.com/KatieM00"
-            className="flex items-center px-4 py-2 bg-neutral-800/10 text-neutral-800 rounded-lg font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
+            className="flex items-center justify-center w-12 h-12 bg-neutral-800/10 text-neutral-800 rounded-full font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
+            title="GitHub"
           >
-            <Github className="w-5 h-5 mr-2" />
-            GitHub
+            <Github className="w-6 h-6" />
           </a>
           <a
             href="https://devpost.com/katiemroberts00?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav&_gl=1*1sm5mr3*_ga*OTg0NTIwMzg4LjE3NTI1MDMxMjQ."
-            className="flex items-center px-4 py-2 bg-orange-600/10 text-orange-600 rounded-lg font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
+            className="flex items-center justify-center w-12 h-12 bg-orange-600/10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
+            title="DevPost"
           >
-            <ExternalLink className="w-5 h-5 mr-2" />
-            DevPost
+            <ExternalLink className="w-6 h-6" />
           </a>
           <a
             href="/john-doe-cv.pdf"
-            className="btn-primary"
+            className="flex items-center justify-center w-12 h-12 bg-neutral-600/10 text-neutral-600 rounded-full font-medium hover:bg-neutral-600 hover:text-white transition-colors duration-200"
+            title="View CV"
           >
-            <FileText className="w-5 h-5 mr-2" />
-            View CV
+            <FileText className="w-6 h-6" />
           </a>
         </div>
       </div>
