@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Linkedin, FileText } from 'lucide-react';
+import {Github, Linkedin} from 'lucide-react';
 import devpostIcon from '../../Devpost.png'; 
 import CV_icon from '../../CV_icon.png'; 
 
