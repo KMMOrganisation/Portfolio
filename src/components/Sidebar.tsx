@@ -21,11 +21,11 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionClick }) => {
   return (
     <div className="h-screen w-64 bg-white border-r border-border flex flex-col sticky top-0">
       <div className="p-6 border-b border-border">
-        <div className="w-26 h-26 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full mx-auto mb-4 flex items-center justify-center">
           <img
             src="profile_picture.jpg"
             alt="Profile"
-            className="w-24 h-24 rounded-full object-cover"
+            className="w-240 h-20 rounded-full object-cover"
           />
         </div>
         <h2 className="text-lg font-semibold text-neutral-900 text-center">Katie Roberts</h2>
