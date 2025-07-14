@@ -4,12 +4,13 @@ import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
 const Education: React.FC = () => {
   const education = [
     {
-      institution: 'Stanford University',
-      degree: 'Master of Science in Computer Science',
-      duration: '2016 - 2018',
-      location: 'Stanford, CA',
-      description: 'Specialized in Machine Learning and Human-Computer Interaction. Thesis: "Improving User Experience through Predictive Interface Design." Maintained 3.8 GPA.',
-      coursework: ['Advanced Algorithms', 'Machine Learning', 'Database Systems', 'Software Engineering', 'HCI Research'],
+      institution: 'University of Exeter ',
+      degree: 'MSc Educational Research',
+      duration: 'Oct 2022 - Feb 2024',
+      location: 'Distance Learning',
+      description: 'Conducted comprehensive research utilizing SPSS and Python for data analysis across core modules including The Nature of Educational Enquiry, Interpretive Methodologies, Scientific Methodologies, and Designing and Communicating Research. Completed final thesis exploring "University students perception of the effectiveness of their financial education in preparing them for life out of education," demonstrating advanced research capabilities and critical analysis of educational outcomes and student preparedness.',
+      coursework: ['The Nature of Educational Enquiry', 'Qualitative Methods in Educational Research', 'Quantitative Methods in Educational Research', 'Designing and Communicating Research', 'Dissertation'],
+      
       type: 'degree'
     },
     {
@@ -19,6 +20,7 @@ const Education: React.FC = () => {
       location: 'Berkeley, CA',
       description: 'Graduated Magna Cum Laude with honors in Computer Science. Active member of Computer Science Honor Society and Programming Club. Led team project that won Best Innovation Award.',
       coursework: ['Data Structures', 'Computer Architecture', 'Operating Systems', 'Web Development', 'Discrete Mathematics'],
+      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
       type: 'degree'
     },
     {
@@ -28,6 +30,7 @@ const Education: React.FC = () => {
       location: 'Online',
       description: 'Comprehensive certification covering cloud architecture, security, and deployment strategies. Demonstrates expertise in designing distributed systems on AWS.',
       coursework: ['Cloud Architecture', 'Security', 'Networking', 'Database Design', 'Cost Optimization'],
+      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
       type: 'certification'
     },
     {
@@ -37,6 +40,7 @@ const Education: React.FC = () => {
       location: 'Online',
       description: 'Certification in cloud-native application development, demonstrating proficiency in GCP services and modern development practices.',
       coursework: ['Cloud Functions', 'Kubernetes', 'API Design', 'DevOps', 'Monitoring'],
+      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
       type: 'certification'
     }
   ];

@@ -4,31 +4,22 @@ import { Heart, Calendar, MapPin, Users } from 'lucide-react';
 const Volunteering: React.FC = () => {
   const volunteerExperience = [
     {
-      organization: 'Code for Good',
-      role: 'Lead Developer & Mentor',
-      duration: '2020 - Present',
-      location: 'San Francisco, CA',
-      description: 'Lead a team of volunteer developers building web applications for local nonprofits. Mentor junior developers and organize monthly hackathons focused on social impact. Successfully delivered 8+ projects that improved operational efficiency for community organizations.',
-      impact: 'Helped 5 local nonprofits modernize their digital presence, resulting in 40% increase in volunteer engagement and 25% improvement in donation processing efficiency.',
-      skills: ['Team Leadership', 'Project Management', 'Full-Stack Development', 'Community Outreach']
+      organization: 'Museum of Oxford (MOX)',
+      role: 'General Volunteer',
+      duration: 'April, 2025 - Present',
+      location: 'Oxford, UK',
+      description: 'Provided comprehensive visitor services including welcoming guests and delivering informational support to enhance the overall visitor experience. Supported diverse event programming for families, schools, and senior visitors, ensuring inclusive and engaging experiences for all demographics. Assisted with front-of-house operations and community outreach initiatives to strengthen organizational presence and accessibility. Provided dedicated support for community-focused events, fostering positive relationships and encouraging ongoing engagement with the organisation.',
+      impact: 'Enhanced visitor satisfaction and accessibility by creating welcoming, informative experiences that encouraged repeat visits and positive word-of-mouth recommendations. Strengthened community connections through successful event programming and outreach initiatives, expanding the organisations reach and impact within the local community.',
+      skills: ['Customer Service', 'Event Support', 'Community Outreach', 'Front-of-House Operations', 'Stakeholder Engagement']
     },
     {
-      organization: 'Girls Who Code',
-      role: 'Technical Instructor',
-      duration: '2019 - Present',
-      location: 'Bay Area, CA',
-      description: 'Teach programming fundamentals to high school girls through hands-on workshops and mentorship programs. Develop curriculum for web development and mobile app creation. Support students in building their first coding projects and preparing for tech careers.',
-      impact: 'Directly mentored 50+ students, with 80% continuing to pursue computer science or related fields. Contributed to curriculum used by 100+ students annually.',
-      skills: ['Teaching', 'Curriculum Development', 'Mentorship', 'Public Speaking']
-    },
-    {
-      organization: 'Tech Literacy for Seniors',
-      role: 'Volunteer Instructor',
-      duration: '2018 - 2022',
-      location: 'San Francisco, CA',
-      description: 'Provided one-on-one and group instruction to senior citizens learning to use computers, smartphones, and internet services. Focused on practical skills like online banking, video calling, and digital safety. Created easy-to-follow guides and resources.',
-      impact: 'Taught 200+ seniors essential digital skills, helping them stay connected with family and access important services during the pandemic.',
-      skills: ['Patient Teaching', 'Technical Documentation', 'Cross-generational Communication']
+      organization: 'Team4Tech',
+      role: 'Cybersecurity consultant',
+      duration: 'October, 2024',
+      location: 'Remote',
+      description: 'Collaborated with Team4Tech to develop solutions for critical cybersecurity issues faced by their education-focused non-profit partner, Pró-Saber. Employed a human-centered design process to develop prototypes for improved cybersecurity practices within the organization. Contributed to a collaborative team environment, honing problem-solving skills while making a positive impact on a global educational non-profit through enhanced digital security measures.',
+      impact: 'Provided comprehensive security solutions and strategic next steps to strengthen Pró-Sabers cybersecurity posture, protecting them from future cyber threats and ensuring the safety and security of the children they serve through their educational programs.',
+      skills: ['Cybersecurity', 'Human-Centered Design', 'Problem Solving', 'Team Collaboration', 'Non-Profit Consulting']
     }
   ];
 

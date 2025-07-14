@@ -4,36 +4,44 @@ import { Calendar, MapPin, Building2 } from 'lucide-react';
 const WorkHistory: React.FC = () => {
   const workExperience = [
     {
-      company: 'TechCorp Solutions',
-      position: 'Senior Full Stack Developer',
-      duration: '2022 - Present',
-      location: 'San Francisco, CA',
-      description: 'Led development of enterprise-scale web applications serving 100K+ users. Architected and implemented microservices infrastructure using Node.js and AWS. Mentored junior developers and established code review processes that improved team productivity by 40%.',
-      skills: ['React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker', 'TypeScript']
+      company: '1Password',
+      position: 'CX Technical Representative',
+      duration: 'Sep 2023 - Present',
+      location: 'Remote',
+      description: 'Provided Level 2 technical support across multiple platforms (browsers, Windows, macOS, Linux) while maintaining exceptional SLA performance and high daily ticket resolution rates. Collaborated with cross-functional teams to bridge communication between customers and developers, identifying feature requests and bugs through Productboard and GitLab. Created comprehensive internal documentation to address knowledge gaps and mentored team members. Built strong B2B and B2C customer relationships through empathetic, solution-focused support, translating complex technical concepts into accessible guidance. Demonstrated proactive learning and exceptional time management while contributing to broader company KPIs.',
+      skills: ['Technical Troubleshooting', 'Customer Support', 'GitLab', 'Productboard', 'Documentation', 'HTML', 'CSS', 'JavaScript']
     },
     {
-      company: 'StartupXYZ',
-      position: 'Full Stack Developer',
-      duration: '2020 - 2022',
-      location: 'Mountain View, CA',
-      description: 'Built and maintained multiple client-facing applications from concept to deployment. Collaborated directly with product managers and designers to deliver features that increased user engagement by 60%. Implemented CI/CD pipelines and automated testing.',
-      skills: ['React', 'Python', 'MongoDB', 'Firebase', 'React Native', 'GraphQL']
+      company: 'The University of the West of England (UWE)',
+      position: 'Customer Relations Assistant',
+      duration: 'May 2023 - Sep 2023',
+      location: 'Bristol, UK',
+      description: 'Provided comprehensive multi-channel support (phone and email) to over 6,000 students, addressing academic, housing, emotional, and financial challenges while maintaining strong relationships with external building management and internal cross-functional teams. Managed complex student accommodation allocation processes using SQL databases (Kintetix) and Archibus to ensure optimal occupancy and student satisfaction. Developed strong interpersonal skills through effective communication with diverse stakeholders, building rapport and resolving conflicts. Demonstrated exceptional organizational capabilities by managing complex databases, coordinating calendars, and consistently meeting deadlines in a fast-paced environment.',
+      skills: ['Customer Support', 'SQL', 'Kintetix', 'Archibus', 'Database Management']
     },
     {
-      company: 'Digital Agency Pro',
-      position: 'Frontend Developer',
-      duration: '2019 - 2020',
-      location: 'San Jose, CA',
-      description: 'Developed responsive web applications for diverse clients including e-commerce platforms and corporate websites. Worked closely with UX/UI designers to implement pixel-perfect designs and ensure cross-browser compatibility.',
-      skills: ['JavaScript', 'React', 'SCSS', 'Webpack', 'Figma']
+      company: 'Coffee #1',
+      position: 'Assistant Manager',
+      duration: 'Jan 2023 - Apr 2023',
+      location: 'Bristol, UK',
+      description: 'Led and motivated team members to achieve sales targets while managing day-to-day operations of a fast-paced coffee shop. Recruited, hired, and trained new staff members, fostering a positive work environment that enhanced team performance and customer service quality. Analyzed financial performance and stock trends to identify improvement opportunities and implement strategies to enhance store performance. Ensured efficient staff scheduling and allocation while maintaining adequate service levels and high customer NPS. Delivered exceptional customer service while maintaining optimal inventory levels and implementing effective promotional strategies to increase sales and customer loyalty.',
+      skills: ['Team Leadership', 'Staff Management', 'Financial Analysis', 'Customer Service', 'Inventory Management']
     },
     {
-      company: 'InnovateTech',
-      position: 'Junior Developer',
-      duration: '2018 - 2019',
-      location: 'Palo Alto, CA',
-      description: 'Started career contributing to internal tools and customer-facing features. Participated in agile development processes and gained experience in modern web development practices. Contributed to open-source projects and technical documentation.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Git', 'REST APIs']
+      company: 'Costa Coffee',
+      position: 'Manager',
+      duration: 'Jan 2022 - Oct 2022',
+      location: 'Bristol, UK',
+      description: 'Successfully managed and developed a high-performing team through effective recruiting, training, and continuous support, creating a positive work environment that drove sales and profit. Analyzed financial performance to identify trends and implement strategic initiatives that increased sales and improved operational efficiency. Ensured smooth daily operations in a high-volume environment through effective scheduling, inventory management, and collaboration with train station staff. Encouraged team focus on high NPS while adhering to key health and safety regulations and service quality standards.',
+      skills: ['Team Management', 'Financial Analysis', 'Operations Management', 'Staff Development', 'Customer Experience']
+    }
+    {
+      company: 'Education First (EF)',
+      position: 'Activity Manager and Seasonal Activity Leader',
+      duration: 'Jun 2017 - Aug 2021',
+      location: 'Bristol, UK',
+      description: 'Progressed from Activity Leader (2017-2020) to Activity Manager, successfully leading and training a diverse team of activity leaders while providing ongoing support and feedback to ensure high-quality, educational, and safe program delivery for international students. Adhered to strict government-enforced Covid-19 health and safety guidelines, ensuring safety of all staff and students. Developed and managed engaging activity programs that aligned with curriculum objectives to enhance overall student experience and cultural immersion. Built strong relationships with local businesses and organizations to create unique and enriching experiences for students, expanding the range of activities offered. Demonstrated strong organizational and planning skills by managing budgets, logistics, and resources to deliver high-quality activities within budgetary constraints.',
+      skills: ['Team Leadership', 'Program Development', 'Budget Management', 'Stakeholder Relations', 'Health & Safety Compliance']
     }
   ];
 
