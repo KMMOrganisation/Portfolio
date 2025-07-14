@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionClick }) => {
       <div className="p-6 border-b border-border">
         <div className="w-20 h-20 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full mx-auto mb-4 flex items-center justify-center">
           <img
-            src="profile_picture.jpg"
+            src="C:\Users\katie\Documents\Portfolio\Portfolio\profile_picture.jpg"
             alt="Profile"
             className="w-20 h-20 rounded-full object-cover"
           />
