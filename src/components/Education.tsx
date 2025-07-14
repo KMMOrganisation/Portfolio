@@ -92,7 +92,7 @@ const Education: React.FC = () => {
                           {course}
 
                    <div>
-                    <h5 className="font-medium text-neutral-800 mb-3">Skills Gained:</h5>
+                    <h5 className="font-medium text-neutral-800 mb-3">Skills:</h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.skills.map((skill, skillIndex) => (
                         <span
