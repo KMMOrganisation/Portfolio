@@ -34,7 +34,7 @@ const WorkHistory: React.FC = () => {
       location: 'Bristol, UK',
       description: 'Successfully managed and developed a high-performing team through effective recruiting, training, and continuous support, creating a positive work environment that drove sales and profit. Analyzed financial performance to identify trends and implement strategic initiatives that increased sales and improved operational efficiency. Ensured smooth daily operations in a high-volume environment through effective scheduling, inventory management, and collaboration with train station staff. Encouraged team focus on high NPS while adhering to key health and safety regulations and service quality standards.',
       skills: ['Team Management', 'Financial Analysis', 'Operations Management', 'Staff Development', 'Customer Experience']
-    }
+    },
     {
       company: 'Education First (EF)',
       position: 'Activity Manager and Seasonal Activity Leader',
