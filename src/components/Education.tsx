@@ -20,7 +20,7 @@ const Education: React.FC = () => {
       location: 'Berkeley, CA',
       description: 'Graduated Magna Cum Laude with honors in Computer Science. Active member of Computer Science Honor Society and Programming Club. Led team project that won Best Innovation Award.',
       coursework: ['Data Structures', 'Computer Architecture', 'Operating Systems', 'Web Development', 'Discrete Mathematics'],
-      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
+      skills: ['Java', 'C++', 'Python', 'Web Development', 'Database Design'],
       type: 'degree'
     },
     {
@@ -30,7 +30,7 @@ const Education: React.FC = () => {
       location: 'Online',
       description: 'Comprehensive certification covering cloud architecture, security, and deployment strategies. Demonstrates expertise in designing distributed systems on AWS.',
       coursework: ['Cloud Architecture', 'Security', 'Networking', 'Database Design', 'Cost Optimization'],
-      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
+      skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Security', 'System Design'],
       type: 'certification'
     },
     {
@@ -40,7 +40,7 @@ const Education: React.FC = () => {
       location: 'Online',
       description: 'Certification in cloud-native application development, demonstrating proficiency in GCP services and modern development practices.',
       coursework: ['Cloud Functions', 'Kubernetes', 'API Design', 'DevOps', 'Monitoring'],
-      skills: ['Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Academic Writing'],
+      skills: ['GCP', 'Kubernetes', 'API Development', 'Microservices', 'Container Orchestration'],
       type: 'certification'
     }
   ];
@@ -81,7 +81,7 @@ const Education: React.FC = () => {
                   
                   <p className="text-neutral-700 mb-6 leading-relaxed">{edu.description}</p>
                   
-                  <div>
+                  <div className="mb-6">
                     <h5 className="font-medium text-neutral-800 mb-3">Key Coursework:</h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.coursework.map((course, courseIndex) => (
@@ -90,9 +90,13 @@ const Education: React.FC = () => {
                           className="px-3 py-1 bg-brand-50 text-brand-700 rounded-md text-sm font-medium border border-brand-200"
                         >
                           {course}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-                   <div>
-                    <h5 className="font-medium text-neutral-800 mb-3">Skills:</h5>
+                  <div>
+                    <h5 className="font-medium text-neutral-800 mb-3">Skills Gained:</h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.skills.map((skill, skillIndex) => (
                         <span
@@ -113,6 +117,5 @@ const Education: React.FC = () => {
     </section>
   );
 };
-
 
 export default Education;
