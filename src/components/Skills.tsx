@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, File, Cloud, Calendar, Shield, Users, Message, Notebook, Headset, Layout, Bot, Notebooktext, Palette, Github, Gitlab } from 'lucide-react';
+import { Code, Database, File, Cloud, Calendar, Shield, Users, MessageCircle, Notebook, Headset, Layout, Bot, FileText, Palette, Github, Gitlab, } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
@@ -11,12 +11,12 @@ const Skills: React.FC = () => {
     { name: 'Trello', icon: Notebook, level: 'H' },
     { name: 'Zoom', icon: Headset, level: 'H' },
     { name: 'Calendly', icon: Calendar, level: 'H' },
-    { name: 'Slack', icon: Message, level: 'H' },
+    { name: 'Slack', icon: MessageCircle, level: 'H' },
     { name: 'Microsoft Office', icon: File, level: 'H' },
     { name: 'Google Workspace', icon: File, level: 'H' },
     { name: 'Squarespace', icon: Layout, level: 'M' },
     { name: 'Productboard', icon: File, level: 'H' },
-    { name: 'Text Expander', icon: Notebooktext, level: 'H' },
+    { name: 'Text Expander', icon: FileText, level: 'H' },
     { name: 'CleanShot X', icon: Database, level: 'M' },
     { name: 'Parallels', icon: Cloud, level: 'H' },
     { name: 'Notion', icon: File, level: 'H' },
