@@ -1,47 +1,92 @@
 import React from 'react';
-import { Code, Database, Palette, Cloud, Smartphone, Terminal } from 'lucide-react';
+import { Code, Database, Palette, Cloud, Smartphone, Terminal, Shield, Users, MessageSquare} from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
-    { name: 'JavaScript', icon: Code, category: 'Programming' },
-    { name: 'TypeScript', icon: Code, category: 'Programming' },
-    { name: 'React', icon: Code, category: 'Frontend' },
-    { name: 'Node.js', icon: Terminal, category: 'Backend' },
-    { name: 'Python', icon: Code, category: 'Programming' },
-    { name: 'PostgreSQL', icon: Database, category: 'Database' },
-    { name: 'MongoDB', icon: Database, category: 'Database' },
-    { name: 'AWS', icon: Cloud, category: 'Cloud' },
-    { name: 'Docker', icon: Cloud, category: 'DevOps' },
-    { name: 'Figma', icon: Palette, category: 'Design' },
-    { name: 'React Native', icon: Smartphone, category: 'Mobile' },
-    { name: 'GraphQL', icon: Database, category: 'API' },
+    { name: 'Okta', icon: Shield, level: 'M' },
+    { name: 'Dayforce', icon: Users, level: 'H' },
+    { name: 'Kinetic', icon: Database, level: 'H' },
+    { name: 'Cerb', icon: MessageSquare, level: 'H' },
+    { name: 'Monday.com', icon: Code, level: 'M' },
+    { name: 'Trello', icon: Database, level: 'H' },
+    { name: 'Zoom', icon: Database, level: 'H' },
+    { name: 'Calendly', icon: Cloud, level: 'H' },
+    { name: 'Slack', icon: Palette, level: 'H' },
+    { name: 'Microsoft Office', icon: Smartphone, level: 'H' },
+    { name: 'Google Workspace', icon: Database, level: 'H' },
+    { name: 'Squarespace', icon: MessageSquare, level: 'M' },
+    { name: 'Productboard', icon: Code, level: 'H' },
+    { name: 'Text Expander', icon: Database, level: 'H' },
+    { name: 'CleanShot X', icon: Database, level: 'M' },
+    { name: 'Parallels', icon: Cloud, level: 'H' },
+    { name: 'Notion', icon: Palette, level: 'iH' },
+    { name: 'Articulate 360', icon: Smartphone, level: 'L' },
+    { name: 'Canva', icon: Database, level: 'H' },
+    { name: 'Powtoon', icon: Palette, level: 'M' },
+    { name: 'GitHub', icon: Smartphone, level: 'M' },
+    { name: 'GitLab', icon: Database, level: 'M' },
+    { name: 'SPSS', icon: Database, level: 'L' },
+    { name: 'My SQL', icon: Palette, level: 'L' },
+    { name: 'HTML', icon: Smartphone, level: 'M', isLearning: true },},
+    { name: 'Javascript', icon: Database, level: 'L', isLearning: true },
+    { name: 'CSS', icon: Database, level: 'L', isLearning: true },
+    { name: 'Typescript', icon: Palette, level: 'L', isLearning: true },
+    { name: 'React', icon: Smartphone, level: 'L', isLearning: true },
+    { name: 'Bolt.new', icon: Database, level: 'M', isLearning: true },
   ];
 
   const professionalSkills = [
     'Team Leadership',
     'Project Management',
-    'Agile/Scrum',
-    'Technical Mentoring',
     'Problem Solving',
     'Communication',
-    'Code Review',
-    'System Design',
-    'Product Strategy',
     'Customer Support',
     'Documentation',
     'Testing & QA',
   ];
 
+  const getIconColor = (level: string) => {
+    switch (level) {
+      case 'L':
+        return 'text-amber-600';
+      case 'M':
+        return 'text-blue-600';
+      case 'H':
+        return 'text-emerald-600';
+      default:
+        return 'text-neutral-600';
+    }
+  };
+
+  const getLevelDots = (level: string) => {
+    const dotCount = level === 'L' ? 1 : level === 'M' ? 2 : 3;
+    const colors = getLevelColors(level);
+
+    return (
+      <div className="flex gap-1 mt-2">
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className={`w-1.5 h-1.5 rounded-full ${
+              i < dotCount ? colors.pill : 'bg-neutral-300'
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section id="skills" className="py-12 px-6 lg:px-12 bg-neutral-50 section-divider">
       <div className="max-w-6xl">
-        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Skills & Expertise</h2>
+        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Skills & Tools</h2>
         
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Technical Skills</h3>
+          <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Tools</h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
             {technicalSkills.map((skill, index) => {
               const Icon = skill.icon;
+              const colors = getLevelColors(skill.level);
               return (
                 <div
                   key={index}
@@ -53,6 +98,12 @@ const Skills: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-neutral-800 mb-1 leading-tight">{skill.name}</h4>
                     <p className="text-xs text-neutral-600">{skill.category}</p>
+                    {getLevelDots(skill.level)}
+                    {skill.isLearning && (
+                        <div className="mt-2">
+                          <span className="text-xs font-medium text-purple-600">Learning</span>
+                        </div>
+                      )}
                   </div>
                 </div>
               );
