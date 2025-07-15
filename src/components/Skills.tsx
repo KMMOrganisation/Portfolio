@@ -1,12 +1,12 @@
 import React from 'react';
-import { Code, Database, File, Cloud, Calendar, Shield, Users, Message, Notebook, Headset, Layout, Bot, Notebooktext, Palette, Github, Gitlab, Email} from 'lucide-react';
+import { Code, Database, File, Cloud, Calendar, Shield, Users, Message, Notebook, Headset, Layout, Bot, Notebooktext, Palette, Github, Gitlab } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
     { name: 'Okta', icon: Shield, level: 'M' },
     { name: 'Dayforce', icon: Users, level: 'H' },
     { name: 'Kinetic', icon: Database, level: 'H' },
-    { name: 'Cerb', icon: Email, level: 'H' },
+    { name: 'Cerb', icon: Headset, level: 'H' },
     { name: 'Monday.com', icon: Users, level: 'M' },
     { name: 'Trello', icon: Notebook, level: 'H' },
     { name: 'Zoom', icon: Headset, level: 'H' },
