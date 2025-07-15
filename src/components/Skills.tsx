@@ -59,16 +59,7 @@ const Skills: React.FC = () => {
   };
 
   const getLevelColors = (level: string) => {
-    switch (level) {
-      case 'L':
-        return { pill: 'bg-amber-600' };
-      case 'M':
-        return { pill: 'bg-blue-600' };
-      case 'H':
-        return { pill: 'bg-emerald-600' };
-      default:
-        return { pill: 'bg-neutral-600' };
-    }
+    return { pill: 'bg-brand-600' }; =
   };
 
   const getLevelDots = (level: string) => {
@@ -106,7 +97,7 @@ const Skills: React.FC = () => {
                   className="card p-4 text-center group cursor-pointer aspect-square flex flex-col justify-center"
                 >
                   <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-brand-100 transition-colors duration-200">
-                    <Icon className="w-5 h-5 text-brand-600" />
+                    <Icon className={`w-5 h-5 ${getIconColor(skill.level)}`} />
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-neutral-800 mb-1 leading-tight">{skill.name}</h4>
