@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, File, Cloud, Calendar, Shield, Users, MessageCircle, Notebook, Headset, Layout, Bot, FileText, Palette, Github, Gitlab, } from 'lucide-react';
+import { Code, Database, File, Calendar, Shield, Users, MessageCircle, Notebook, Headset, Layout, Bot, FileText, Palette, Github, Gitlab, Laptop} from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
@@ -17,8 +17,8 @@ const Skills: React.FC = () => {
     { name: 'Squarespace', icon: Layout, level: 'M' },
     { name: 'Productboard', icon: File, level: 'H' },
     { name: 'Text Expander', icon: FileText, level: 'H' },
-    { name: 'CleanShot X', icon: Database, level: 'M' },
-    { name: 'Parallels', icon: Cloud, level: 'H' },
+    { name: 'CleanShot X', icon: Laptop, level: 'M' },
+    { name: 'Parallels', icon: Laptop, level: 'H' },
     { name: 'Notion', icon: File, level: 'H' },
     { name: 'Articulate 360', icon: Notebook, level: 'L' },
     { name: 'Canva', icon: Database, level: 'H' },
@@ -26,8 +26,8 @@ const Skills: React.FC = () => {
     { name: 'GitHub', icon: Github, level: 'M' },
     { name: 'GitLab', icon: Gitlab, level: 'M' },
     { name: 'SPSS', icon: Database, level: 'L' },
-    { name: 'My SQL', icon: Palette, level: 'L' },
-    { name: 'Supabase', icon:Database, level: 'L', isLearning: true },
+    { name: 'My SQL', icon: Database, level: 'L' },
+    { name: 'Supabase', icon: Database, level: 'L', isLearning: true },
     { name: 'Netlify', icon: Code, Level: 'M', isLearning: true },
     { name: 'HTML', icon: Code, level: 'M', isLearning: true },
     { name: 'Javascript', icon: Code, level: 'L', isLearning: true },
