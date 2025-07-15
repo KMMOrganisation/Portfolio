@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
   };
 
   const getLevelColors = (level: string) => {
-    return { pill: 'bg-brand-600' }; =
+    return { pill: 'bg-brand-600' }; 
   };
 
   const getLevelDots = (level: string) => {
