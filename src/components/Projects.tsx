@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown, ChevronRight as ChevronRightIcon, Github, ExternalLink } from 'lucide-react';
+import devpostIcon from '../../Devpost.png'; 
 
 const Projects: React.FC = () => {
   const [activeImageIndex, setActiveImageIndex] = useState<{[key: number]: number}>({});
@@ -8,79 +9,34 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Day Weave - AI planning tool',
       images: [
         'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg',
         'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg',
         'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg',
         'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg'
       ],
-      overview: 'A full-stack e-commerce platform built with React and Node.js, featuring user authentication, product catalog, shopping cart, and payment integration. Designed to handle high traffic with optimized performance and scalability.',
-      tools: 'Built using React, Node.js, Express, PostgreSQL, Stripe API, AWS S3, and Docker. Implemented Redux for state management, JWT for authentication, and used Tailwind CSS for responsive design.',
-      learned: 'Gained deep understanding of payment processing, inventory management, and user experience optimization. Learned to implement complex state management, real-time updates, and security best practices.',
-      github: 'https://github.com/username/ecommerce-platform',
-      demo: 'https://ecommerce-demo.com'
+      overview: 'Developed full-stack AI-powered day planning application that transforms 3+ hours of planning into 30 seconds of serendipitous discovery. Built for Worlds Largest Hackathon, featuring innovative "Surprise Me!" mystery mode that creates progressive reveals of curated activities. Integrates multiple APIs with intelligent prompt engineering to generate personalised itineraries under 2 minutes, achieving 100% user satisfaction in beta testing.',
+      tools: 'React, TypeScript, Supabase, Google Maps API, Google Gemini AI, OpenWeather API, Google Places API, Netlify, PostgreSQL, Edge Functions, Row-Level Security, IONOS Domain, Bolt.new',
+      learned: 'Multi-API orchestration and server-side security implementation, AI prompt engineering for location-based recommendations, real-time data fusion combining weather and places APIs, progressive web app development with mobile-first responsive design, user experience design for reducing decision fatigue, secure authentication systems, and hackathon development under tight deadlines',
+      github: 'https://github.com/KatieM00/DayWeave',
+      demo: 'https://dayweave.com/'
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: 'Yuh Hear Dem - Parliamentary Intelligence System',
       images: [
         'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg',
         'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg',
         'https://images.pexels.com/photos/3184632/pexels-photo-3184632.jpeg',
         'https://images.pexels.com/photos/3182816/pexels-photo-3182816.jpeg'
       ],
-      overview: 'A collaborative task management application with real-time updates, team collaboration features, and advanced project tracking. Includes drag-and-drop functionality, deadline management, and progress visualization.',
-      tools: 'Developed with React, TypeScript, Firebase, and Material-UI. Implemented real-time synchronization using Firebase Firestore, authentication with Firebase Auth, and deployed on Vercel.',
-      learned: 'Mastered real-time data synchronization, complex UI interactions, and team collaboration features. Enhanced skills in TypeScript, Firebase ecosystem, and modern deployment practices.',
-      github: 'https://github.com/username/task-manager',
-      demo: 'https://task-manager-demo.com'
+      overview: 'Co-developed civic transparency tool using Googles Agent Development Kit (ADK) to make parliamentary proceedings searchable and accessible. Built to transform long, unstructured YouTube recordings from Barbados Parliament into conversational knowledge assistant. Implemented hybrid GraphRAG search combining knowledge graphs with vector embeddings to provide timestamped responses and follow-up questions. Applied educational design principles for user-friendly interface that makes civic engagement intuitive and natural.',
+      tools: 'Python, Google ADK, MongoDB Atlas, Gemini Flash, Knowledge Graphs, Vector Embeddings, HTML/CSS/JavaScript, YouTube API, GraphRAG, LLM Integration',
+      learned:  'Knowledge graph architecture design from messy real-world transcripts, hybrid search systems combining graph and vector databases, LLM prompt engineering for civic data processing, real-time AI chat interface development, transcript cleaning and entity extraction, collaborative remote development across time zones, and building production-grade AI tools grounded in structured data',
+      github: 'https://github.com/KatieM00/YuhHearDem',
+      demo: 'https://yuhheardem.com/'
     },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      images: [
-        'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg',
-        'https://images.pexels.com/photos/1446076/pexels-photo-1446076.jpeg',
-        'https://images.pexels.com/photos/1441016/pexels-photo-1441016.jpeg',
-        'https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg'
-      ],
-      overview: 'A comprehensive weather dashboard with location-based forecasts, interactive maps, and historical data visualization. Features include severe weather alerts, air quality monitoring, and personalized weather recommendations.',
-      tools: 'Created using React, D3.js for data visualization, OpenWeatherMap API, and Mapbox for interactive maps. Styled with Tailwind CSS and deployed using Netlify with automatic deployment.',
-      learned: 'Developed expertise in data visualization, API integration, and geolocation services. Improved skills in creating responsive, data-driven interfaces and working with external APIs.',
-      github: 'https://github.com/username/weather-dashboard',
-      demo: 'https://weather-dashboard-demo.com'
-    },
-    {
-      id: 4,
-      title: 'Social Media Analytics',
-      images: [
-        'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
-        'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg',
-        'https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg',
-        'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg'
-      ],
-      overview: 'An analytics dashboard for social media performance tracking with automated reporting, sentiment analysis, and competitor comparison. Provides actionable insights through interactive charts and customizable reports.',
-      tools: 'Built with React, Python Flask backend, PostgreSQL database, and Chart.js for visualizations. Integrated with Twitter and Instagram APIs, implemented machine learning for sentiment analysis using scikit-learn.',
-      learned: 'Gained experience in full-stack development, API integration, and data analysis. Learned to implement machine learning algorithms and create meaningful data visualizations for business insights.',
-      github: 'https://github.com/username/social-analytics',
-      demo: 'https://social-analytics-demo.com'
-    },
-    {
-      id: 5,
-      title: 'Portfolio Website Builder',
-      images: [
-        'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg',
-        'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg',
-        'https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg',
-        'https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg'
-      ],
-      overview: 'A drag-and-drop portfolio website builder that allows users to create professional portfolios without coding. Features customizable templates, content management, and one-click deployment.',
-      tools: 'Developed using React, Node.js, MongoDB, and AWS S3. Implemented drag-and-drop functionality with react-beautiful-dnd, user authentication, and automated deployment pipeline.',
-      learned: 'Mastered complex UI interactions, user experience design, and full-stack architecture. Enhanced understanding of content management systems and automated deployment processes.',
-      github: 'https://github.com/username/portfolio-builder',
-      demo: 'https://portfolio-builder-demo.com'
-    }
   ];
 
   const nextImage = (projectId: number, totalImages: number) => {
@@ -219,20 +175,28 @@ const Projects: React.FC = () => {
                     </div>
                     
                     {/* Project Links */}
+                    
                     <div className="flex gap-4 pt-6">
                       <a
                         href={project.github}
-                        className="flex items-center px-4 py-2 bg-neutral-800 text-white rounded-lg font-medium hover:bg-neutral-900 transition-colors duration-200"
+                        className="flex items-center justify-center w-12 h-12 bg-neutral-800/10 text-neutral-800 rounded-full font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
+                        title="GitHub"
                       >
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
+                        <Github className="w-6 h-6" />
                       </a>
                       <a
                         href={project.demo}
-                        className="btn-primary"
+                        className="flex items-center justify-center w-12 h-12 bg-blue-600/10 text-blue-600 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                        title="Live Demo"
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
+                        <ExternalLink className="w-6 h-6" />
+                      </a>
+                      <a
+                        href="https://devpost.com/katiemroberts00"
+                        className="flex items-center justify-center w-12 h-12 bg-orange-600/10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200 group"
+                        title="DevPost"
+                      >
+                        <img src={devpostIcon} alt="DevPost" className="w-10 h-10 group-hover:brightness-0 group-hover:invert transition-all duration-200" />
                       </a>
                     </div>
                   </div>
