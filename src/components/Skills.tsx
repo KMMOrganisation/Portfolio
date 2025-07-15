@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, Palette, Cloud, Smartphone, Terminal, Shield, Users, MessageSquare} from 'lucide-react';
+import { Code, Database, File, Cloud, calendardays, Shield, Users, MessageSquare, Notebook, Headset, Layouttemplate, Bot, Notebooktext, Palette, Github, Gitlab} from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
@@ -7,34 +7,34 @@ const Skills: React.FC = () => {
     { name: 'Dayforce', icon: Users, level: 'H' },
     { name: 'Kinetic', icon: Database, level: 'H' },
     { name: 'Cerb', icon: MessageSquare, level: 'H' },
-    { name: 'Monday.com', icon: Code, level: 'M' },
-    { name: 'Trello', icon: Database, level: 'H' },
-    { name: 'Zoom', icon: Database, level: 'H' },
-    { name: 'Calendly', icon: Cloud, level: 'H' },
-    { name: 'Slack', icon: Palette, level: 'H' },
-    { name: 'Microsoft Office', icon: Smartphone, level: 'H' },
-    { name: 'Google Workspace', icon: Database, level: 'H' },
-    { name: 'Squarespace', icon: MessageSquare, level: 'M' },
-    { name: 'Productboard', icon: Code, level: 'H' },
-    { name: 'Text Expander', icon: Database, level: 'H' },
+    { name: 'Monday.com', icon: Users, level: 'M' },
+    { name: 'Trello', icon: Notebook, level: 'H' },
+    { name: 'Zoom', icon: Headset, level: 'H' },
+    { name: 'Calendly', icon: calendardays, level: 'H' },
+    { name: 'Slack', icon: MessageSquare, level: 'H' },
+    { name: 'Microsoft Office', icon: File, level: 'H' },
+    { name: 'Google Workspace', icon: File, level: 'H' },
+    { name: 'Squarespace', icon: Layouttemplate, level: 'M' },
+    { name: 'Productboard', icon: File, level: 'H' },
+    { name: 'Text Expander', icon: Notebooktext, level: 'H' },
     { name: 'CleanShot X', icon: Database, level: 'M' },
     { name: 'Parallels', icon: Cloud, level: 'H' },
-    { name: 'Notion', icon: Palette, level: 'H' },
-    { name: 'Articulate 360', icon: Smartphone, level: 'L' },
+    { name: 'Notion', icon: File, level: 'H' },
+    { name: 'Articulate 360', icon: Notebook, level: 'L' },
     { name: 'Canva', icon: Database, level: 'H' },
     { name: 'Powtoon', icon: Palette, level: 'M' },
-    { name: 'GitHub', icon: Smartphone, level: 'M' },
-    { name: 'GitLab', icon: Database, level: 'M' },
+    { name: 'GitHub', icon: Github, level: 'M' },
+    { name: 'GitLab', icon: Gitlab, level: 'M' },
     { name: 'SPSS', icon: Database, level: 'L' },
     { name: 'My SQL', icon: Palette, level: 'L' },
     { name: 'Supabase', icon:Database, level: 'L', isLearning: true },
     { name: 'Netlify', icon: Code, Level: 'M', isLearning: true },
-    { name: 'HTML', icon: Smartphone, level: 'M', isLearning: true },
-    { name: 'Javascript', icon: Database, level: 'L', isLearning: true },
-    { name: 'CSS', icon: Database, level: 'L', isLearning: true },
-    { name: 'Typescript', icon: Palette, level: 'L', isLearning: true },
-    { name: 'React', icon: Smartphone, level: 'L', isLearning: true },
-    { name: 'Bolt.new', icon: Database, level: 'M', isLearning: true }
+    { name: 'HTML', icon: Code, level: 'M', isLearning: true },
+    { name: 'Javascript', icon: Code, level: 'L', isLearning: true },
+    { name: 'CSS', icon: Code, level: 'L', isLearning: true },
+    { name: 'Typescript', icon: Code, level: 'L', isLearning: true },
+    { name: 'React', icon: Code, level: 'L', isLearning: true },
+    { name: 'Bolt.new', icon: Bot, level: 'M', isLearning: true }
   ];
 
   const professionalSkills = [
