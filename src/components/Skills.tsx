@@ -1,20 +1,20 @@
 import React from 'react';
-import { Code, Database, File, Cloud, Calendar, Shield, Users, MessageSquare, Notebook, Headset, Layouttemplate, Bot, Notebooktext, Palette, Github, Gitlab} from 'lucide-react';
+import { Code, Database, File, Cloud, Calendar, Shield, Users, Message, Notebook, Headset, Layout, Bot, Notebooktext, Palette, Github, Gitlab, Email} from 'lucide-react';
 
 const Skills: React.FC = () => {
   const technicalSkills = [
     { name: 'Okta', icon: Shield, level: 'M' },
     { name: 'Dayforce', icon: Users, level: 'H' },
     { name: 'Kinetic', icon: Database, level: 'H' },
-    { name: 'Cerb', icon: MessageSquare, level: 'H' },
+    { name: 'Cerb', icon: Email, level: 'H' },
     { name: 'Monday.com', icon: Users, level: 'M' },
     { name: 'Trello', icon: Notebook, level: 'H' },
     { name: 'Zoom', icon: Headset, level: 'H' },
     { name: 'Calendly', icon: Calendar, level: 'H' },
-    { name: 'Slack', icon: MessageSquare, level: 'H' },
+    { name: 'Slack', icon: Message, level: 'H' },
     { name: 'Microsoft Office', icon: File, level: 'H' },
     { name: 'Google Workspace', icon: File, level: 'H' },
-    { name: 'Squarespace', icon: Layouttemplate, level: 'M' },
+    { name: 'Squarespace', icon: Layout, level: 'M' },
     { name: 'Productboard', icon: File, level: 'H' },
     { name: 'Text Expander', icon: Notebooktext, level: 'H' },
     { name: 'CleanShot X', icon: Database, level: 'M' },
