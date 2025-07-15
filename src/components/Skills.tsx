@@ -58,6 +58,19 @@ const Skills: React.FC = () => {
     }
   };
 
+  const getLevelColors = (level: string) => {
+    switch (level) {
+      case 'L':
+        return { pill: 'bg-amber-600' };
+      case 'M':
+        return { pill: 'bg-blue-600' };
+      case 'H':
+        return { pill: 'bg-emerald-600' };
+      default:
+        return { pill: 'bg-neutral-600' };
+    }
+  };
+
   const getLevelDots = (level: string) => {
     const dotCount = level === 'L' ? 1 : level === 'M' ? 2 : 3;
     const colors = getLevelColors(level);
