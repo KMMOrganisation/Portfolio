@@ -19,7 +19,7 @@ const Skills: React.FC = () => {
     { name: 'Text Expander', icon: Database, level: 'H' },
     { name: 'CleanShot X', icon: Database, level: 'M' },
     { name: 'Parallels', icon: Cloud, level: 'H' },
-    { name: 'Notion', icon: Palette, level: 'iH' },
+    { name: 'Notion', icon: Palette, level: 'H' },
     { name: 'Articulate 360', icon: Smartphone, level: 'L' },
     { name: 'Canva', icon: Database, level: 'H' },
     { name: 'Powtoon', icon: Palette, level: 'M' },
@@ -27,12 +27,12 @@ const Skills: React.FC = () => {
     { name: 'GitLab', icon: Database, level: 'M' },
     { name: 'SPSS', icon: Database, level: 'L' },
     { name: 'My SQL', icon: Palette, level: 'L' },
-    { name: 'HTML', icon: Smartphone, level: 'M', isLearning: true },},
+    { name: 'HTML', icon: Smartphone, level: 'M', isLearning: true },
     { name: 'Javascript', icon: Database, level: 'L', isLearning: true },
     { name: 'CSS', icon: Database, level: 'L', isLearning: true },
     { name: 'Typescript', icon: Palette, level: 'L', isLearning: true },
     { name: 'React', icon: Smartphone, level: 'L', isLearning: true },
-    { name: 'Bolt.new', icon: Database, level: 'M', isLearning: true },
+    { name: 'Bolt.new', icon: Database, level: 'M', isLearning: true }
   ];
 
   const professionalSkills = [
