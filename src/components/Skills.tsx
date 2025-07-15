@@ -38,13 +38,28 @@ const Skills: React.FC = () => {
   ];
 
   const professionalSkills = [
-    'Team Leadership',
-    'Project Management',
-    'Problem Solving',
-    'Communication',
-    'Customer Support',
-    'Documentation',
-    'Testing & QA',
+   'Communication',
+   'Critical Thinking',
+   'Attention to Detail',
+   'Multitasking',
+   'Interpersonal Skills',
+   'Coaching',
+   'Strategic Thinking',
+   'Creativity',
+   'Problem Solving',
+   'Team Leadership',
+   'Customer Support',
+   'Mentoring',
+   'Empathy',
+   'Adaptability',
+   'Time Management',
+   'Collaboration',
+   'Research & Analysis',
+   'Documentation',
+   'Learning Agility',
+   'Relationship Building',
+   'Organisation',
+   'Conflict Resolution',
   ];
 
   const getIconColor = (level: string) => {
