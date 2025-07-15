@@ -27,6 +27,8 @@ const Skills: React.FC = () => {
     { name: 'GitLab', icon: Database, level: 'M' },
     { name: 'SPSS', icon: Database, level: 'L' },
     { name: 'My SQL', icon: Palette, level: 'L' },
+    { name: 'Supabase', icon:Database, level: 'L', isLearning: true },
+    { name: 'Netlify', icon: Code, Level: 'M', isLearning: true },
     { name: 'HTML', icon: Smartphone, level: 'M', isLearning: true },
     { name: 'Javascript', icon: Database, level: 'L', isLearning: true },
     { name: 'CSS', icon: Database, level: 'L', isLearning: true },
