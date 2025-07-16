@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown, ChevronRight as ChevronRightIcon, Github, ExternalLink } from 'lucide-react';
-import devpostIcon from '../../Devpost.png'; 
+import devpostIcon from '../../Devpost.png';
+
+import betaTestingSurvey from '../Media/Beta_testing_survey_Overview.png';
+import firstSuccess from '../Media/First_successful_plan_generation.png';
+import helpMePlan from '../Media/Help_me_plan.png';
+import landgingPage from '../Media/Landing_page.png';
+import supriseMe from '../Media/Surprise_me.png';
+
+
+import yhdChat from '../Media/Yuh_Hear_Dem_Chat.png';
+import yhdLanding from '../Media/Yuh_Hear_Dem_Landing.png';
+
+
+interface MediaItem {
+  type: 'image' | 'video';
+  src: string;
+  alt?: string;
+}
 
 const Projects: React.FC = () => {
   const [activeImageIndex, setActiveImageIndex] = useState<{[key: number]: number}>({});
@@ -10,11 +27,38 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'Day Weave - AI planning tool',
-      images: [
-        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg',
-        'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg',
-        'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg',
-        'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg'
+      media: [
+        {
+          type: 'video' as const,
+          src: 'https://vimeo.com/1094460411', 
+          alt: 'Day Weave demo video'
+        },
+        {
+          type: 'image' as const,
+          src: betaTestingSurvey,
+          alt: 'Beta testing survey overview'
+        },
+        {
+          type: 'image' as const,
+          src: firstSuccess,
+          alt: 'First time success with plan generation'
+        },
+        {
+          type: 'image' as const,
+          src: supriseMe,
+          alt: 'Day Weave UI'
+        },
+        {
+          type: 'image' as const,
+          src: helpMePlan,
+          alt: 'Day Weave UI'
+        },
+        {
+          type: 'image' as const,
+          src: landgingPage,
+          alt: 'Day Weave UI'
+        }
+        
       ],
       overview: 'Developed full-stack AI-powered day planning application that transforms 3+ hours of planning into 30 seconds of serendipitous discovery. Built for Worlds Largest Hackathon, featuring innovative "Surprise Me!" mystery mode that creates progressive reveals of curated activities. Integrates multiple APIs with intelligent prompt engineering to generate personalised itineraries under 2 minutes, achieving 100% user satisfaction in beta testing.',
       tools: 'React, TypeScript, Supabase, Google Maps API, Google Gemini AI, OpenWeather API, Google Places API, Netlify, PostgreSQL, Edge Functions, Row-Level Security, IONOS Domain, Bolt.new',
@@ -25,11 +69,27 @@ const Projects: React.FC = () => {
     {
       id: 2,
       title: 'Yuh Hear Dem - Parliamentary Intelligence System',
-      images: [
-        'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg',
-        'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg',
-        'https://images.pexels.com/photos/3184632/pexels-photo-3184632.jpeg',
-        'https://images.pexels.com/photos/3182816/pexels-photo-3182816.jpeg'
+      media: [
+        {
+          type: 'video' as const,
+          src: 'https://www.youtube.com/watch?v=kLPxpGwY6HQ',
+          alt: 'Yuh Hear Dem demo video'
+        },
+        {
+          type: 'image' as const,
+          src: yhdLanding,
+          alt: 'LAnding page for Yuh Hear Dem'
+        },
+        {
+          type: 'image' as const,
+          src: yhdChat,
+          alt: 'Example chat with Yuh Hear Dem'
+        },
+        {
+          type: 'image' as const,
+          src: yhdLanding,
+          alt: 'LAnding page for Yuh Hear Dem'
+        }
       ],
       overview: 'Co-developed civic transparency tool using Googles Agent Development Kit (ADK) to make parliamentary proceedings searchable and accessible. Built to transform long, unstructured YouTube recordings from Barbados Parliament into conversational knowledge assistant. Implemented hybrid GraphRAG search combining knowledge graphs with vector embeddings to provide timestamped responses and follow-up questions. Applied educational design principles for user-friendly interface that makes civic engagement intuitive and natural.',
       tools: 'Python, Google ADK, MongoDB Atlas, Gemini Flash, Knowledge Graphs, Vector Embeddings, HTML/CSS/JavaScript, YouTube API, GraphRAG, LLM Integration',
@@ -60,6 +120,32 @@ const Projects: React.FC = () => {
     }));
   };
 
+  const renderMediaItem = (mediaItem: MediaItem, title: string, index: number) => {
+    if (mediaItem.type === 'video') {
+      return (
+        <video
+          key={index}
+          className="w-full h-full object-cover"
+          controls
+          preload="metadata"
+          aria-label={mediaItem.alt || `${title} video ${index + 1}`}
+        >
+          <source src={mediaItem.src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return (
+        <img
+          key={index}
+          src={mediaItem.src}
+          alt={mediaItem.alt || `${title} screenshot ${index + 1}`}
+          className="w-full h-full object-cover"
+        />
+      );
+    }
+  };
+
   return (
     <section id="projects" className="py-12 px-6 lg:px-12 section-divider">
       <div className="max-w-7xl">
@@ -72,39 +158,36 @@ const Projects: React.FC = () => {
             return (
               <div key={project.id} className="card">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Image Carousel */}
+                  {/* Media Carousel */}
                   <div className="relative">
                     <div className="aspect-video bg-neutral-100 rounded-lg overflow-hidden border border-border">
-                      <img
-                        src={project.images[currentImageIndex]}
-                        alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+                      {renderMediaItem(project.media[currentImageIndex], project.title, currentImageIndex)}
                     </div>
                     
                     {/* Carousel Controls */}
                     <button
-                      onClick={() => prevImage(project.id, project.images.length)}
+                      onClick={() => prevImage(project.id, project.media.length)}
                       className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity duration-200"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
                     <button
-                      onClick={() => nextImage(project.id, project.images.length)}
+                      onClick={() => nextImage(project.id, project.media.length)}
                       className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-opacity duration-200"
                     >
                       <ChevronRight className="w-5 h-5" />
                     </button>
                     
-                    {/* Image Indicators */}
+                    {/* Media Indicators */}
                     <div className="flex justify-center mt-4 space-x-2">
-                      {project.images.map((_, index) => (
+                      {project.media.map((mediaItem, index) => (
                         <button
                           key={index}
                           onClick={() => setActiveImageIndex(prev => ({ ...prev, [project.id]: index }))}
                           className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                             index === currentImageIndex ? 'bg-brand-600' : 'bg-neutral-300'
                           }`}
+                          title={mediaItem.type === 'video' ? 'Video' : 'Image'}
                         />
                       ))}
                     </div>
