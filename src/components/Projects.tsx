@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
         {
           type: 'image' as const,
           src: yhdLanding,
-          alt: 'LAnding page for Yuh Hear Dem'
+          alt: 'Landing page for Yuh Hear Dem'
         }
       ],
       overview: 'Co-developed civic transparency tool using Googles Agent Development Kit (ADK) to make parliamentary proceedings searchable and accessible. Built to transform long, unstructured YouTube recordings from Barbados Parliament into conversational knowledge assistant. Implemented hybrid GraphRAG search combining knowledge graphs with vector embeddings to provide timestamped responses and follow-up questions. Applied educational design principles for user-friendly interface that makes civic engagement intuitive and natural.',
