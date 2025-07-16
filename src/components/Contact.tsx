@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Send, Github, Linkedin, ExternalLink, FileText } from 'lucide-react';
+import devpostIcon from '../../Devpost.png'; 
+import CV_icon from '../../CV_icon.png';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,7 @@ const Contact: React.FC = () => {
   });
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -55,28 +58,61 @@ const Contact: React.FC = () => {
     }
     
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! I\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+    try {
+      // Create FormData for Netlify submission
+      const formDataToSubmit = new FormData();
+      formDataToSubmit.append('form-name', 'contact');
+      formDataToSubmit.append('name', formData.name);
+      formDataToSubmit.append('email', formData.email);
+      formDataToSubmit.append('message', formData.message);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        body: formDataToSubmit
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+      
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
-    <section id="contact" className="py-12 px-6 lg:px-12 section-divider">
-      <div className="max-w-6xl">
-        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Get In Touch</h2>
+    <section id="contact" className="py-12 px-6 lg:px-12 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Get In Touch</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="card">
-            <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Send me a message</h3>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send me a message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800">Thank you for your message! I'll get back to you soon.</p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
+              </div>
+            )}
+            
+            <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
                 </label>
                 <input
@@ -85,8 +121,8 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 ${
-                    errors.name ? 'border-red-500' : 'border-border'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 ${
+                    errors.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Your full name"
                 />
@@ -94,7 +130,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email *
                 </label>
                 <input
@@ -103,8 +139,8 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 ${
-                    errors.email ? 'border-red-500' : 'border-border'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 ${
+                    errors.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="your.email@example.com"
                 />
@@ -112,7 +148,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -121,8 +157,8 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={6}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors duration-200 resize-vertical ${
-                    errors.message ? 'border-red-500' : 'border-border'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-vertical ${
+                    errors.message ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Tell me about your project or just say hello..."
                 />
@@ -132,7 +168,8 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                onClick={handleSubmit}
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
@@ -141,78 +178,51 @@ const Contact: React.FC = () => {
                 )}
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
-            </form>
+            </div>
           </div>
           
-          {/* Contact Information */}
+          {/* Right Side Content */}
           <div className="space-y-8">
-            <div className="card">
-              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Contact Information</h3>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Let's Connect</h3>
               
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="w-5 h-5 text-brand-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-neutral-600">Email</p>
-                    <p className="text-neutral-900 font-medium">Available on my CV</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-brand-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-neutral-600">Phone</p>
-                    <p className="text-neutral-900 font-medium">Available on my CV</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="w-5 h-5 text-brand-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-neutral-600">Location</p>
-                    <p className="text-neutral-900 font-medium">Remote - Europe</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="card">
-              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">Let's Connect</h3>
-              
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://linkedin.com/in/johndoe"
-                  className="flex items-center px-4 py-2 bg-blue-600/10 text-blue-600 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                  href="https://www.linkedin.com/in/katieroberts00/"
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600/10 text-blue-600 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                  title="LinkedIn"
                 >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn
+                  <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://github.com/johndoe"
-                  className="flex items-center px-4 py-2 bg-neutral-800/10 text-neutral-800 rounded-lg font-medium hover:bg-neutral-800 hover:text-white transition-colors duration-200"
+                  href="https://github.com/KatieM00"
+                  className="flex items-center justify-center w-12 h-12 bg-gray-800/10 text-gray-800 rounded-full font-medium hover:bg-gray-800 hover:text-white transition-colors duration-200"
+                  title="GitHub"
                 >
-                  <Github className="w-5 h-5 mr-2" />
-                  GitHub
+                  <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://devpost.com/johndoe"
-                  className="flex items-center px-4 py-2 bg-orange-600/10 text-orange-600 rounded-lg font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200"
+                  href="https://devpost.com/katiemroberts00?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav&_gl=1*1sm5mr3*_ga*OTg0NTIwMzg4LjE3NTI1MDMxMjQ."
+                  className="flex items-center justify-center w-12 h-12 bg-orange-600/10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200 group"
+                  title="DevPost"
                 >
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  DevPost
+                  <img src={devpostIcon} alt="DevPost" className="w-10 h-10 group-hover:brightness-0 group-hover:invert transition-all duration-200" />
+                </a>
+                <a
+                  href={cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-yellow-600/10 text-yellow-600 rounded-full font-medium hover:bg-gray-600 hover:text-white transition-colors duration-200 group"
+                  title="View CV"
+                >
+                  <FileText className="w-6 h-6" />
                 </a>
               </div>
             </div>
             
-            <div className="bg-brand-50 rounded-xl p-8 border border-brand-200">
-              <h3 className="text-xl font-semibold text-brand-800 mb-4">Open to Opportunities</h3>
-              <p className="text-brand-700 leading-relaxed">
+            <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4">Open to Opportunities</h3>
+              <p className="text-blue-700 leading-relaxed">
                 I'm always interested in discussing new opportunities, collaborating on interesting projects, 
                 or just having a conversation about technology and education. Don't hesitate to reach out!
               </p>
