@@ -11,6 +11,10 @@ import supriseMe from '../Media/Surprise_me_1.png';
 import yhdChat from '../Media/YHD_Chat.png';
 import yhdLanding from '../Media/YHD_Landing_Page.png';
 
+import computeThinking from '../Media/compThinking.png';
+import shaDom1 from '../Media/sd1.png'
+import shaDom2 from '../Media/sd2.png';
+
 interface MediaItem {
   type: 'image' | 'video';
   src: string;
@@ -93,6 +97,30 @@ const Projects: React.FC = () => {
       learned: 'Knowledge graph architecture design from messy real-world transcripts, hybrid search systems combining graph and vector databases, LLM prompt engineering for civic data processing, real-time AI chat interface development, transcript cleaning and entity extraction, collaborative remote development across time zones, and building production-grade AI tools grounded in structured data',
       github: 'https://github.com/KatieM00/YuhHearDem',
       demo: 'https://yuhheardem.com/'
+    },
+    {
+      id: 3,
+      title: 'Self-Directed Learning Documents',
+      media: [
+        {
+          type: 'image' as const,
+          src: computeThinking,
+          alt: 'What is computational thinking?'
+        },
+        {
+          type: 'image' as const,
+          src: shaDom1,
+          alt: 'Shadow DOM explained Page 1'
+        },
+        {
+          type: 'image' as const,
+          src: shaDom2,
+          alt: 'Shadow DOM explained Page 2'
+        }
+      ],
+      overview: 'To support my development in my role at 1Password, I created a series of visual learning guides. Drawing on my background in teacher training, I designed these resources to help structure and reinforce new technical knowledge in a way that was both accessible and engaging. These documents not only aided my own understanding, but also reflect my ability to break down complex topics visually—an approach that aligns well with both learning and instructional design best practices.',
+      tools: 'I only used Google Docs to create these. I have become a master at all the formatting tricks and shortcuts to make the most of this tool.',
+      learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
     },
   ];
 

@@ -33,7 +33,7 @@ const Courses: React.FC = () => {
       institution: '1Password',
       duration: '2024',
       location: 'Online',
-      description: 'I have built a foundational understanding of core Project Management principles, including essential skills for planning, organising, and controlling projects. This includes familiarity with key roles within project teams and the application of tools like the RACI matrix. I’ve explored practical best practices to ensure projects are delivered successfully, particularly within educational design contexts. These skills support the timely delivery of high-quality resources.',
+      description: 'I built a foundational understanding of core Project Management principles, including essential skills for planning, organising, and controlling projects. This includes familiarity with key roles within project teams and the application of tools like the RACI matrix. I’ve explored practical best practices to ensure projects are delivered successfully, particularly within educational design contexts. These skills support the timely delivery of high-quality resources.',
       skills: ['Project Management', 'Project Planning', 'Team Coordination', 'RACI Matrix', 'Educational Design', 'Resource Delivery']
     },
     {
@@ -41,7 +41,7 @@ const Courses: React.FC = () => {
       institution: 'The Odin Project',
       duration: '2024',
       location: 'Online',
-      description: 'I am currently developing foundational skills in HTML, CSS, and JavaScript, with a focus on how they apply across different contexts. Through my work with 1Password, I’ve gained a stronger understanding of page structure, user interaction, and the ability to inspect and interpret page behaviour. I’m also expanding into website design, with growing awareness of how UI/UX choices influence user perception. This learning has enhanced both my course design understanding and my ability to contribute effectively in my role at 1Password.',
+      description: 'II developed foundational skills in HTML, CSS, and JavaScript, with a focus on how they apply across different contexts. Through my work with 1Password, I’ve gained a stronger understanding of page structure, user interaction, and the ability to inspect and interpret page behaviour. I’m also expanding into website design, with growing awareness of how UI/UX choices influence user perception. This learning has enhanced both my course design understanding and my ability to contribute effectively in my role at 1Password.',
       skills: ['HTML', 'CSS', 'JavaScript', 'UI/UX Design', 'Web Development', 'Course Design']
     },
 
