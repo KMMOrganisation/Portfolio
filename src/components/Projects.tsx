@@ -4,13 +4,13 @@ import devpostIcon from '../../Devpost.png';
 
 import betaTestingSurvey from '../Media/Beta_testing_survey_Overview.png';
 import firstSuccess from '../Media/First_successful_plan_generation.png';
-import helpMePlan from '../Media/Help_me_plan.png';
+import helpMePlan from '../Media/Help_me_plan page.png';
 import landgingPage from '../Media/Landing page.png';
 import supriseMe from '../Media/Surprise_me.png';
 
 
-import yhdChat from '../Media/Yuh_Hear_Dem_Chat.png';
-import yhdLanding from '../Media/Yuh_Hear_Dem_Landing.png';
+import yhdChat from '../Media/YHD_Chat.png';
+import yhdLanding from '../Media/YHD_Landing_Page.png';
 
 
 interface MediaItem {
