@@ -5,7 +5,7 @@ import devpostIcon from '../../Devpost.png';
 import betaTestingSurvey from '../Media/Beta_testing_survey_Overview.png';
 import firstSuccess from '../Media/First_successful_plan_generation.png';
 import helpMePlan from '../Media/Help_me_plan.png';
-import landgingPage from '../Media/Landing_page.png';
+import landgingPage from '../Media/Landing page.png';
 import supriseMe from '../Media/Surprise_me.png';
 
 
