@@ -204,7 +204,7 @@ const Projects: React.FC = () => {
           key={index}
           src={mediaItem.src}
           alt={mediaItem.alt || `${title} screenshot ${index + 1}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain rounded-lg"
         />
       );
     }
