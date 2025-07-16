@@ -12,7 +12,6 @@ import supriseMe from '../Media/Surprise_me_1.png';
 import yhdChat from '../Media/YHD_Chat.png';
 import yhdLanding from '../Media/YHD_Landing_Page.png';
 
-
 interface MediaItem {
   type: 'image' | 'video';
   src: string;

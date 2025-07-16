@@ -2,6 +2,7 @@ import React from 'react';
 import {Github, Linkedin} from 'lucide-react';
 import devpostIcon from '../../Devpost.png'; 
 import CV_icon from '../../CV_icon.png'; 
+import cv from '../Katie Roberts.pdf';
 
 const Overview: React.FC = () => {
   return (
@@ -57,7 +58,9 @@ const Overview: React.FC = () => {
             <img src={devpostIcon} alt="DevPost" className="w-10 h-10 group-hover:brightness-0 group-hover:invert transition-all duration-200" />
           </a>
           <a
-            href="/john-doe-cv.pdf"
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-12 h-12 bg-yellow-600/10 text-yellow-600 rounded-full font-medium hover:bg-neutral-600 hover:text-white transition-colors duration-200 group"
             title="View CV"
           >
