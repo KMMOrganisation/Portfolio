@@ -12,8 +12,9 @@ import yhdChat from '../Media/YHD_Chat.png';
 import yhdLanding from '../Media/YHD_Landing_Page.png';
 
 import computeThinking from '../Media/compThinking.png';
-import shaDom1 from '../Media/sd1.png'
+import shaDom1 from '../Media/sd1.png';
 import shaDom2 from '../Media/sd2.png';
+import shaDom from '../Media/shaDom.pdf';
 
 interface MediaItem {
   type: 'image' | 'video';
@@ -123,8 +124,8 @@ const Projects: React.FC = () => {
       tools: 'I only used Google Docs to create these. I have become a master at all the formatting tricks and shortcuts to make the most of this tool.',
       learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
       documents: [
-        { label: "Computational Thinking PDF", link: "https://your-link.com/ct.pdf" },
-        { label: "Shadow DOM PNG", link: "https://your-link.com/sd1.png" }
+        { label: "Computational Thinking PNG", link: computeThinking},
+        { label: "Shadow DOM PDF", link: shaDom }
       ]
     },
   ];

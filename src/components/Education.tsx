@@ -9,7 +9,7 @@ const Education: React.FC = () => {
       duration: 'Oct 2022 - Feb 2024',
       location: 'Distance Learning',
       description: 'Conducted comprehensive research utilizing SPSS and Python for data analysis across core modules including The Nature of Educational Enquiry, Interpretive Methodologies, Scientific Methodologies, and Designing and Communicating Research. Completed final thesis exploring "University students perception of the effectiveness of their financial education in preparing them for life out of education," demonstrating advanced research capabilities and critical analysis of educational outcomes and student preparedness.',
-      coursework: ['The Nature of Educational Enquiry', 'Qualitative Methods in Educational Research', 'Quantitative Methods in Educational Research', 'Designing and Communicating Research', 'Dissertation'],
+      coursework: ['The Nature of Educational Enquiry', 'Scientific Methodologies', 'Interpretive Methodologies', 'Qualitative and Quantitative Methods', 'Designing and Communicating Research', 'Dissertation'],
       skills: ['Qualitative Research Methods', 'Quantitative Research Methods', 'Data Analysis', 'SPSS', 'Python', 'Communication', 'Data visualisation', 'Educational research'],
       type: 'degree'
     },
