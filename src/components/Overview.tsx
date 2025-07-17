@@ -14,23 +14,21 @@ const Overview: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-neutral-700 leading-relaxed mb-6">
-              As a multifaceted professional with a strong background in technical writing, customer experience, and education,
-              I excel in creating user-centered documentation and fostering cross-functional collaboration. Currently serving as a CX Technical Representative at 1Password,
-              I play an integral role in identifying knowledge gaps, creating comprehensive internal documentation, and simplifying complex technical issues for diverse audiences.
-              My experience spans various sectors, including education, customer service, and product support, allowing me to develop a well-rounded approach to problem-solving and team leadership.
+              I’m a versatile and people-focused professional with over six years experience across customer support, internal documentation, and team leadership.
+              Currently working at 1Password as a CX Technical Representative, I provide empathetic technical support, resolve complex multi-platform issues,
+              and contribute to knowledge-sharing through internal documentation and training materials.
             </p>
             
             <p className="text-neutral-700 leading-relaxed mb-6">
-              I bring a unique blend of technical writing expertise, instructional design knowledge, and customer success experience.
-              From creating clear and accessible technical documentation at 1Password to leveraging educational methodologies to design user-friendly resources,
-              I am passionate about translating complex ideas into practical, easy-to-understand content.
-              With hands-on experience in mentoring teams, driving customer success, and managing product support processes, I thrive in environments that demand empathy, precision, and collaboration.
+             My background spans the education, SaaS, and service sectors, giving me a well-rounded approach to problem-solving, communication, and collaboration.
+             I have a particular strength in breaking down complex information into clear, accessible resources—whether for customers, colleagues, or wider teams.
+             This is supported by my academic grounding in educational research, as well as practical experience in instructional design and content creation.
             </p>
             
             <p className="text-neutral-700 leading-relaxed">
-              My educational background, including an MSc in Educational Research, enhances my approach to content creation, enabling me to design structured,
-              evidence-based materials that improve learning and development outcomes. Whether its developing training documentation, supporting cross-functional teams,
-              or facilitating customer relationships, I bring an analytical and empathetic mindset to every project.
+              Whether I’m supporting customers, coordinating a team, or writing documentation,
+              I bring an analytical mindset, strong communication skills,
+              and a genuine commitment to improving experiences—for users and teams alike.
             </p>
           </div>
         </div>
