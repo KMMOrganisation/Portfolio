@@ -16,6 +16,13 @@ import shaDom1 from '../Media/sd1.png';
 import shaDom2 from '../Media/sd2.png';
 import shaDom from '../Media/shaDom.pdf';
 
+import groupPolicies from '../Media/pageStructure.md';
+import pageStructure from '../Media/groupPolicies.md';
+import ps1 from '../Media/ps1.png';
+import ps2 from '../Media/ps2.png';
+import gp1 from '../Media/gp1.png';
+import gp2 from '../Media/gp2.png';
+
 interface MediaItem {
   type: 'image' | 'video';
   src: string;
@@ -125,7 +132,40 @@ const Projects: React.FC = () => {
       learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
       documents: [
         { label: "Computational Thinking PNG", link: computeThinking},
-        { label: "Shadow DOM PDF", link: shaDom }
+        { label: "Shadow DOM PDF", link: shaDom }]
+      },
+    {
+      id: 3,
+      title: 'Internal Training Documents',
+      noSocial: true,
+      media: [
+        {
+          type: 'image' as const,
+          src: gp1,
+          alt: 'Example 1 of Group policies document'
+        },
+        {
+          type: 'image' as const,
+          src: gp2,
+          alt: 'Example 2 of Group policies document'
+        },
+        {
+          type: 'image' as const,
+          src: ps1,
+          alt: 'Example 1 of Page structure document'
+        },
+        {
+          type: 'image' as const,
+          src: ps2,
+          alt: 'Example 2 of Page structure document'
+        },
+      ],
+      overview: 'To support my development in my role at 1Password, I created a series of visual learning guides. Drawing on my background in teacher training, I designed these resources to help structure and reinforce new technical knowledge in a way that was both accessible and engaging. These documents not only aided my own understanding, but also reflect my ability to break down complex topics visually—an approach that aligns well with both learning and instructional design best practices.',
+      tools: 'I only used Google Docs to create these. I have become a master at all the formatting tricks and shortcuts to make the most of this tool.',
+      learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
+      documents: [
+        { label: "How Group Policies can impact the function of 1Password", link: groupPolicies},
+        { label: "Understanding page structure for tourblshooting", link: pageStructure }
       ]
     },
   ];
