@@ -122,6 +122,10 @@ const Projects: React.FC = () => {
       overview: 'To support my development in my role at 1Password, I created a series of visual learning guides. Drawing on my background in teacher training, I designed these resources to help structure and reinforce new technical knowledge in a way that was both accessible and engaging. These documents not only aided my own understanding, but also reflect my ability to break down complex topics visually—an approach that aligns well with both learning and instructional design best practices.',
       tools: 'I only used Google Docs to create these. I have become a master at all the formatting tricks and shortcuts to make the most of this tool.',
       learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
+      documents: [
+        { label: "Computational Thinking PDF", link: "https://your-link.com/ct.pdf" },
+        { label: "Shadow DOM PNG", link: "https://your-link.com/sd1.png" }
+      ]
     },
   ];
 
@@ -321,7 +325,39 @@ const Projects: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    
+
+                    {/* Documents Section */}
+                    {project.documents && (
+                     <div>
+                      <button
+                         onClick={() => toggleSection(`${project.id}-documents`)}
+                         className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 border border-gray-200"
+                      >
+                         <span className="font-semibold text-gray-800">View Full Documents</span>
+                         {expandedSections[`${project.id}-documents`] ? (
+                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                      ) : (
+                          <ChevronRight className="w-5 h-5 text-gray-600" />
+                        )}
+                      </button>
+                         {expandedSections[`${project.id}-documents`] && (
+                          <div className="p-4 text-gray-700 border border-t-0 border-gray-200 rounded-b-lg bg-white space-y-2">
+                            {project.documents.map((doc, idx) => (
+                              <a
+                               key={idx}
+                               href={doc.link}
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               className="text-blue-600 hover:underline block"
+                              >
+                               {doc.label}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
                     {/* Project Links */}
                     {!project.noSocial && (
                       <div className="flex gap-4 pt-6">
