@@ -101,6 +101,7 @@ const Projects: React.FC = () => {
     {
       id: 3,
       title: 'Self-Directed Learning Documents',
+      noSocial: true,
       media: [
         {
           type: 'image' as const,
@@ -322,29 +323,44 @@ const Projects: React.FC = () => {
                     </div>
                     
                     {/* Project Links */}
-                    <div className="flex gap-4 pt-6">
-                      <a
-                        href={project.github}
-                        className="flex items-center justify-center w-12 h-12 bg-gray-800 bg-opacity-10 text-gray-800 rounded-full font-medium hover:bg-gray-800 hover:text-white transition-colors duration-200"
-                        title="GitHub"
-                      >
-                        <Github className="w-6 h-6" />
-                      </a>
-                      <a
-                        href={project.demo}
-                        className="flex items-center justify-center w-12 h-12 bg-blue-600 bg-opacity-10 text-blue-600 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
-                        title="Live Demo"
-                      >
-                        <ExternalLink className="w-6 h-6" />
-                      </a>
-                      <a
-                        href="https://devpost.com/katiemroberts00"
-                        className="flex items-center justify-center w-12 h-12 bg-orange-600 bg-opacity-10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200 group"
-                        title="DevPost"
-                      >
-                        <img src={devpostIcon} alt="DevPost" className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-200" />
-                      </a>
-                    </div>
+                    {!project.noSocial && (
+                      <div className="flex gap-4 pt-6">
+                        {project.github && (
+                         <a
+                           href={project.github}
+                           className="flex items-center justify-center w-12 h-12 bg-gray-800 bg-opacity-10 text-gray-800 rounded-full font-medium hover:bg-gray-800 hover:text-white transition-colors duration-200"
+                           title="GitHub"
+                          >
+
+                           <Github className="w-6 h-6" />
+                        </a>
+                        )}
+
+                       {project.demo && (
+                         <a
+                           href={project.demo}
+                           className="flex items-center justify-center w-12 h-12 bg-blue-600 bg-opacity-10 text-blue-600 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                           title="Live Demo"
+                         >
+                        
+                          <ExternalLink className="w-6 h-6" />
+                        </a>
+                        )}
+
+                        <a
+                          href="https://devpost.com/katiemroberts00"
+                          className="flex items-center justify-center w-12 h-12 bg-orange-600 bg-opacity-10 text-orange-600 rounded-full font-medium hover:bg-orange-600 hover:text-white transition-colors duration-200 group"
+                          title="DevPost"
+                         >
+
+                          <img
+                            src={devpostIcon}
+                            alt="DevPost"
+                            className="w-6 h-6 group-hover:brightness-0 group-hover:invert transition-all duration-200"
+                          />
+                       </a>
+                     </div>
+                    )}
                   </div>
                 </div>
               </div>
