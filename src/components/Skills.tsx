@@ -30,9 +30,9 @@ const Skills: React.FC = () => {
   ];
 
   const professionalSkills = [
-    'Communication', 'Critical Thinking', 'Multitasking', 'Coaching', 'Strategic Thinking',
-    'Problem Solving', 'Team Leadership', 'Customer Support', 'Mentoring', 'Empathy',
-    'Adaptability', 'Time Management', 'Collaboration', 'Documentation',
+    'Communication', 'Critical Thinking', 'Team Training', 'Strategic Thinking',
+    'Problem Solving', 'Team Leadership', 'Customer Support', 'Empathy',
+    'Adaptability', 'Collaboration', 'Documentation',
     'Learning Agility', 'Organisation', 'Conflict Resolution',
   ];
 
