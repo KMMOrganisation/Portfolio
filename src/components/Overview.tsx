@@ -21,14 +21,14 @@ const Overview: React.FC = () => {
             
             <p className="text-neutral-700 leading-relaxed mb-6">
              My background spans the education, SaaS, and service sectors, giving me a well-rounded approach to problem-solving, communication, and collaboration.
-             I have a particular strength in breaking down complex information into clear, accessible resources—whether for customers, colleagues, or wider teams.
+             I have a particular strength in breaking down complex information into clear, accessible resources, whether for customers, colleagues, or wider teams.
              This is supported by my academic grounding in educational research, as well as practical experience in instructional design and content creation.
             </p>
             
             <p className="text-neutral-700 leading-relaxed">
               Whether I’m supporting customers, coordinating a team, or writing documentation,
               I bring an analytical mindset, strong communication skills,
-              and a genuine commitment to improving experiences—for users and teams alike.
+              and a genuine commitment to improving experiences, for users and teams alike.
             </p>
           </div>
         </div>
