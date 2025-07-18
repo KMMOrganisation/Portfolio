@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Send, Github, Linkedin, ExternalLink, FileText } from 'lucide-react';
 import devpostIcon from '../../Devpost.png'; 
 import CV_icon from '../../CV_icon.png';
-import cv from '../Katie Roberts.pdf';
+import cv from '../Katie_Roberts.pdf';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
