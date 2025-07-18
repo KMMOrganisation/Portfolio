@@ -115,31 +115,26 @@ const Skills: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-2 px-4 py-2 bg-white text-neutral-800 rounded-full text-sm shadow-sm"
-                    style={{
-                      borderImage: 'linear-gradient(to right, #a855f7, #8b5cf6) 1',
-                      borderWidth: '1px',
-                      borderStyle: 'solid',
-                    }}
+                    className="flex items-center gap-2 px-4 py-2 bg-violet-50 text-neutral-800 border border-violet-200 rounded-full text-sm shadow-sm"
                   >
                     <Icon className={`w-4 h-4 ${getIconColor(level)}`} />
                     <span className="font-medium">{skill.name}</span>
                     <div className="flex gap-0.5 ml-1">
                       {[...Array(3)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`w-1.5 h-1.5 rounded-full ${
-                            i < dotCount ? 'bg-brand-600' : 'bg-neutral-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
+                    <div
+                      key={i}
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        i < dotCount ? 'bg-brand-600' : 'bg-neutral-300'
+                      }`}
+                    />
+                 ))}
             </div>
-          </>
-        )}
+          </div>
+        );
+      })}
+    </div>
+  </>
+)}
 
         {/* Professional Skills */}
         <div>
