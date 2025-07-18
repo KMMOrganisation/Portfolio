@@ -2,7 +2,7 @@ import React from 'react';
 import {Github, Linkedin} from 'lucide-react';
 import devpostIcon from '../../Devpost.png'; 
 import CV_icon from '../../CV_icon.png'; 
-import cv from '../Katie Roberts.pdf';
+import cv from '../Katie_Roberts.pdf';
 
 const Overview: React.FC = () => {
   return (
