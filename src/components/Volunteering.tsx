@@ -32,8 +32,8 @@ const Volunteering: React.FC = () => {
           {volunteerExperience.map((volunteer, index) => (
             <div key={index} className="card">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-rose-50 rounded-lg flex items-center justify-center flex-shrink-0 border border-rose-200">
-                  <Heart className="w-6 h-6 text-rose-600" />
+                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-200">
+                  <Heart className="w-6 h-6 text-blue-600" />
                 </div>
                 
                 <div className="flex-1">
@@ -67,7 +67,7 @@ const Volunteering: React.FC = () => {
                     {volunteer.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-rose-50 text-rose-700 rounded-md text-sm font-medium border border-rose-200"
+                        className="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-200"
                       >
                         {skill}
                       </span>
