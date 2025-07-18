@@ -84,40 +84,73 @@ const Skills: React.FC = () => {
     );
   };
 
-  return (
-    <section id="skills" className="py-12 px-6 lg:px-12 bg-neutral-50 section-divider">
-      <div className="max-w-6xl">
-        <h2 className="text-4xl font-bold text-neutral-900 mb-12">Skills & Tools</h2>
-        
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Tools</h3>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            {technicalSkills.map((skill, index) => {
-              const Icon = skill.icon;
-              const colors = getLevelColors(skill.level);
-              return (
-                <div
-                  key={index}
-                  className="card p-4 text-center group cursor-pointer aspect-square flex flex-col justify-center"
-                >
-                  <div className="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-brand-100 transition-colors duration-200">
-                    <Icon className={`w-5 h-5 ${getIconColor(skill.level)}`} />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-neutral-800 mb-1 leading-tight">{skill.name}</h4>
-                    <p className="text-xs text-neutral-600">{skill.category}</p>
-                    {getLevelDots(skill.level)}
-                    {skill.isLearning && (
-                        <div className="mt-2">
-                          <span className="text-xs font-medium text-purple-600">Learning</span>
-                        </div>
-                      )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+ {/* Regular Skills */}
+<div className="flex flex-wrap gap-3 mb-12">
+  {technicalSkills.filter(skill => !skill.isLearning).map((skill, index) => {
+    const Icon = skill.icon;
+    const level = skill.level;
+    const dotCount = level === 'L' ? 1 : level === 'M' ? 2 : 3;
+
+    return (
+      <div
+        key={index}
+        className="flex items-center gap-2 px-4 py-2 bg-emerald-50 text-neutral-800 border border-emerald-100 rounded-full text-sm shadow-sm"
+      >
+        <Icon className={`w-4 h-4 ${getIconColor(level)}`} />
+        <span className="font-medium">{skill.name}</span>
+        <div className="flex gap-0.5 ml-1">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className={`w-1.5 h-1.5 rounded-full ${
+                i < dotCount ? 'bg-brand-600' : 'bg-neutral-300'
+              }`}
+            />
+          ))}
         </div>
+      </div>
+    );
+  })}
+</div>
+
+{/* Currently Learning */}
+{technicalSkills.some(skill => skill.isLearning) && (
+  <>
+    <h4 className="text-xl font-semibold text-neutral-700 mb-4">Currently Learning</h4>
+    <div className="flex flex-wrap gap-3">
+      {technicalSkills.filter(skill => skill.isLearning).map((skill, index) => {
+        const Icon = skill.icon;
+        const level = skill.level;
+        const dotCount = level === 'L' ? 1 : level === 'M' ? 2 : 3;
+
+        return (
+          <div
+            key={index}
+            className="flex items-center gap-2 px-4 py-2 bg-white text-neutral-800 rounded-full text-sm shadow-sm"
+            style={{
+              borderImage: 'linear-gradient(to right, #a855f7, #8b5cf6) 1',
+              borderWidth: '1px',
+              borderStyle: 'solid',
+            }}
+          >
+            <Icon className={`w-4 h-4 ${getIconColor(level)}`} />
+            <span className="font-medium">{skill.name}</span>
+            <div className="flex gap-0.5 ml-1">
+              {[...Array(3)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`w-1.5 h-1.5 rounded-full ${
+                    i < dotCount ? 'bg-brand-600' : 'bg-neutral-300'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </>
+)}
 
         <div>
           <h3 className="text-2xl font-semibold text-neutral-800 mb-8">Professional Skills</h3>
