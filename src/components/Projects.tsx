@@ -162,8 +162,8 @@ const Projects: React.FC = () => {
       tools: 'I only used Google Docs to create these. I have become a master at all the formatting tricks and shortcuts to make the most of this tool.',
       learned: 'Through this process, I developed a stronger ability to structure and communicate technical information in a visually accessible way. It reinforced my understanding of new concepts, improved my documentation skills, and demonstrated how self-directed learning can feed into broader team knowledge and internal resources.',
       documents: [
-        { label: "How Group Policies can impact the function of 1Password", link: gp1 },
-        { label: "Understanding page structure for tourblshooting", link:  ps1 }
+        { label: "How Group Policies and 1Password", link: gp1 },
+        { label: "Understanding page structure for troubleshooting", link:  ps1 }
       ]
     },
   ];
